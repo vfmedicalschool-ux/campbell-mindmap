@@ -1448,12 +1448,9 @@ const NQ=[
     qSec.classList.add('active');
     if(!qSec.hasChildNodes())renderQuiz();
   });
-  qBtn.click();
-  setTimeout(()=>{
-    const first=tabBar.querySelector('.tab-btn:not(#quizTabBtn)');
-    if(first)first.click();
-    qBtn.id='quizTabBtn';
-  },50);
+  // 페이지 로드 시 첫 번째 마인드맵 탭이 기본 표시됨
+  // (퀴즈 탭은 사용자가 직접 클릭하여 진입)
+  qBtn.id='quizTabBtn';
 })();
 </script>
 </body>
