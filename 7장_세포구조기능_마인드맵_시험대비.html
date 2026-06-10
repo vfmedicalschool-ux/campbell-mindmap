@@ -223,12 +223,18 @@ const CONCEPTS = [
   color:'#0891b2', title:'생물학자들은 세포 연구를 위해 현미경과 생화학적 도구를 이용한다',
   root:{kichul:['연세대 17-26'], text:'7.1\n세포 연구\n방법', ch:[
     { text:'★ 현미경 종류', type:'comp', ch:[
-      { text:'광학현미경(LM)\n가시광선 이용\n최대 분해능 0.2 μm\n살아있는 세포 관찰 가능', type:'exam' },
-      { text:'전자현미경(EM)\n전자빔 이용\n분해능 0.2 nm (1000배↑)\n살아있는 세포 관찰 불가', type:'exam' },
+      { text:'광학현미경(LM)', type:'exam', ch:[
+        { text:'가시광선 이용\n최대 분해능 0.2 μm', type:'exam' },
+        { text:'살아있는 세포 관찰 가능\n형광 염색 → 특정 구조 표지', type:'eg' }
+      ]},
+      { text:'전자현미경(EM)', type:'exam', ch:[
+        { text:'전자빔 이용\n분해능 0.2 nm (광학의 1000배↑)', type:'exam' },
+        { text:'살아있는 세포 관찰 불가\n시료 고정·탈수 처리 필요', type:'warn' }
+      ]},
       { text:'TEM: 투과전자현미경\n내부 구조 관찰\nSEM: 주사전자현미경\n표면 3D 이미지', type:'comp' }
     ]},
     { text:'★ 세포 분획법\n(Cell Fractionation)', type:'exam', ch:[
-      { text:'세포 분쇄 후\n차등 원심분리\n속도↑ → 작은 입자 침전\n소기관 분리·분석', type:'exam' },
+      { text:'원리\n세포 분쇄 후 차등 원심분리\n속도↑ → 더 작은 입자 침전', type:'exam' },
       { text:'원심분리 순서\n저속: 핵·세포 잔해\n중속: 미토콘드리아·엽록체\n고속: 리보솜·소포체', type:'exam' }
     ]},
     { text:'세포 크기 범위', ch:[
@@ -260,12 +266,21 @@ const CONCEPTS = [
   color:'#16a34a', title:'진핵세포의 유전정보는 핵 안에 있으며, 리보솜에 의해 번역된다',
   root:{kichul:['연세대 2022','고려대 2022'], text:'7.3\n핵과\n리보솜', ch:[
     { text:'★★ 핵(Nucleus)', type:'exam', ch:[
-      { text:'핵막(Nuclear envelope)\n이중막 구조\n핵공(Nuclear pore) 존재\nRNA·단백질 통과', type:'exam' },
-      { text:'염색질(Chromatin)\nDNA + 히스톤 단백질\n세포분열 시 염색체로 응축\n유전정보 저장', type:'exam' },
-      { text:'인(Nucleolus)\n핵 안 구조물\nrRNA 합성 장소\n리보솜 소단위체 조립', type:'exam' }
+      { text:'핵막(Nuclear envelope)', type:'exam', ch:[
+        { text:'이중막 구조\n핵공(Nuclear pore) 존재', type:'exam' },
+        { text:'핵공: RNA·단백질 선택적 통과\n물질 교환 통로', type:'exam' }
+      ]},
+      { text:'염색질(Chromatin)', type:'exam', ch:[
+        { text:'DNA + 히스톤 단백질 복합체\n유전정보 저장', type:'exam' },
+        { text:'세포분열 시 염색체로 응축\n비분열 시 분산된 실 형태', type:'eg' }
+      ]},
+      { text:'인(Nucleolus)', type:'exam', ch:[
+        { text:'핵 내부의 막 없는 구조물\nrRNA 합성 장소', type:'exam' },
+        { text:'rRNA + 단백질 → 리보솜 소단위체 조립\n세포질로 수출', type:'exam' }
+      ]}
     ]},
     { text:'★ 리보솜(Ribosome)', type:'exam', ch:[
-      { text:'rRNA + 단백질 구성\n대·소 두 소단위체\n단백질 합성(번역) 수행\n모든 세포에 존재', type:'exam' },
+      { text:'구성·기능\nrRNA + 단백질 구성\n대·소 두 소단위체\n단백질 합성(번역) 수행', type:'exam' },
       { text:'자유리보솜\n세포질에 유리\n세포질 내 단백질 합성\n예) 대사효소', type:'comp' },
       { text:'부착리보솜\n조면소포체에 결합\n분비·막·소기관 단백질 합성\n예) 소화효소·인슐린', type:'comp' }
     ]}
@@ -276,21 +291,83 @@ const CONCEPTS = [
 { id:'c74', num:'7.4', label:'7.4 내막계',
   color:'#ea580c', title:'내막계는 단백질 이동을 조절하고 세포의 물질대사 기능을 수행한다',
   root:{kichul:['연세대 17-24','고려대 21·24'], text:'7.4\n내막계\n(Endomembrane\nSystem)', ch:[
-    { text:'★★ 소포체(ER)', type:'exam', ch:[
-      { text:'조면소포체(rER)\n부착리보솜 있음\n분비 단백질 합성·가공\n막 단백질 삽입', type:'exam' },
-      { text:'활면소포체(sER)\n리보솜 없음\n지질·스테로이드 합성\n칼슘 저장·독소 해독', type:'exam' }
+
+    { text:'★★ 소포체(ER)\n진핵세포 전체 막의\n절반 이상 차지\n시스터나+관의 네트워크', type:'exam', ch:[
+
+      { text:'활면소포체(sER)', type:'exam', ch:[
+        { text:'① 지질·스테로이드 합성\n성호르몬(정소·난소)\n부신 스테로이드 호르몬\n정소·난소에 풍부', type:'exam' },
+        { text:'② 독소·약물 해독\n주로 간세포\n수산기(-OH) 부가\n→ 수용성↑, 체외 배출↑', type:'exam', ch:[
+          { text:'⚠ 내성 증가 기전\n약물 → 활면소포체 증가\n→ 해독효소 증가\n→ 더 많은 용량 필요', type:'warn' }
+        ]},
+        { text:'③ 칼슘 이온 저장\n소포체 내강에 저장\n신경 자극 시 세포질로 방출\n→ 근육세포 수축 촉진', type:'exam' }
+      ]},
+
+      { text:'조면소포체(rER)', type:'exam', ch:[
+        { text:'① 분비 단백질 합성\n리보솜→소포체 내강 진입\n3차원 구조로 접힘\n예) 인슐린, 소화효소', type:'exam' },
+        { text:'② 당단백질 형성\n탄수화물 공유 결합\n→ 당단백질(glycoprotein)\n골지체에서 추가 변형', type:'exam' },
+        { text:'③ 막 단백질·막 자체 합성\n소수성 부위 → 막에 삽입\n인지질도 합성\n수송 소낭으로 다른 내막계로 전달', type:'exam' },
+        { text:'④ 수송 소낭 출아\n전이성 소포체에서 형성\n→ 골지체 시스 면으로 이동', type:'exam' }
+      ]}
     ]},
-    { text:'★★ 골지체(Golgi)', type:'exam', ch:[
-      { text:'납작한 막주머니\n(시스터나) 더미\n시스 면(소낭 수령·소포체쪽) → 트랜스 면(소낭이 성장 후 떨어져 나가는 쪽)\n단백질 수령·가공·분류·발송', type:'exam' },
-      { text:'단백질 당화(glycosylation)\n수송 소낭으로 발송\n분비·리소좀·막으로 분류\n세포의 "우체국"', type:'exam' }
+
+    { text:'★★ 골지체(Golgi)\n생산·저장·분류·수송\n세포의 "발송 접수 센터"', type:'exam', ch:[
+
+      { text:'극성 구조', type:'comp', ch:[
+        { text:'시스 면\n소포체 근처\n소포체 소낭을 수령\n(골지체에서 소낭을 "받는" 쪽)', type:'exam' },
+        { text:'트랜스 면\n소낭이 성장 후 떨어져 나가는 쪽\n최종 산물 발송\n리소좀·세포막·세포 외부로', type:'exam' },
+        { text:'시스터나 성숙 모델\n시스터나 자체가 시스→트랜스 이동\n이동하면서 산물 가공\n일부 소낭은 효소를 앞 시스터나로 되돌려 보냄', type:'eg' }
+      ]},
+
+      { text:'가공 기능', type:'exam', ch:[
+        { text:'① 당단백질 탄수화물 변형\n단당류 제거·치환\n→ 매우 다양한 탄수화물 완성', type:'exam' },
+        { text:'② 특정 고분자 자체 합성\n식물세포벽 펙틴\n비셀룰로스 다당류', type:'eg' },
+        { text:'③ 막 인지질 변형\n분자 구성 변화', type:'exam' }
+      ]},
+
+      { text:'분류·발송 기능', type:'exam', ch:[
+        { text:'분자적 인식표 부착\n인산기 등 표식\n→ 우편번호처럼 목적지 결정', type:'exam' },
+        { text:'소낭 표면 인식 분자\n목적지 막의 결합 부위 인식\n→ 리소좀·세포막·분비 경로로 정확 전달', type:'exam' }
+      ]}
     ]},
-    { text:'★ 리소좀(Lysosome)', type:'exam', ch:[
-      { text:'가수분해효소 포함\n내부 pH ≈ 5 (산성)\n세포내 소화 기관\n식포와 융합→소화', type:'exam' },
-      { text:'세포자가포식(Autophagy)\n손상된 소기관 분해\n테이-삭스병\n효소 결핍→지질 축적', type:'warn' }
+
+    { text:'★ 리소좀(Lysosome)\n막으로 된 소낭\n세포내 소화 담당', type:'exam', ch:[
+
+      { text:'구조·특성', type:'exam', ch:[
+        { text:'가수분해효소 포함\n내부 pH ≈ 5 (산성)\nH⁺ 펌프로 산성 유지\n효소: 산성 환경서 최적 활성', type:'exam' },
+        { text:'효소·막의 기원\n조면소포체에서 합성\n골지체 가공\n트랜스 면에서 출아', type:'exam' },
+        { text:'⚠ 효소 누출 시\n세포질 중성 pH → 효소 불활성\n다량 누출 시 → 자가소화 → 세포 파괴', type:'warn' }
+      ]},
+
+      { text:'★ 식세포작용\n(Phagocytosis)', type:'exam', ch:[
+        { text:'먹이·세균 등을 감싸 식포 형성\n식포 + 리소좀 융합\n→ 가수분해효소로 소화\n단량체는 세포질로 흡수', type:'exam' },
+        { text:'대식세포(Macrophage)\n세균·이물질 잡아먹어 소화\n면역 방어 세포', type:'eg' }
+      ]},
+
+      { text:'★ 자가소화작용\n(Autophagy)', type:'exam', ch:[
+        { text:'손상된 소기관을 막으로 감쌈\n리소좀과 융합 → 분해\n단량체 재활용\n예) 인간 간세포: 매주 고분자 절반 재활용', type:'exam' },
+        { text:'테이-삭스병\n지질분해효소 결핍\n뇌세포 내 지질 축적\n→ 뇌 손상', type:'warn' }
+      ]}
     ]},
+
+    { text:'액포(Vacuole)\n소포체·골지체에서 유래\n세포 종류별 기능 다양', ch:[
+
+      { text:'★ 중심액포 (식물세포)', type:'exam', ch:[
+        { text:'구조\n성숙 식물세포 가장 큰 소기관\n액포막(tonoplast)으로 둘러싸임\n내부: 세포 수액', type:'exam' },
+        { text:'기능 ①: 무기이온 저장\n칼슘·염소 이온 저장\n필요 시 세포질로 방출', type:'exam' },
+        { text:'기능 ②: 세포 생장\n물 흡수 → 액포 팽창\n새 세포질 없이 세포 크기 증가\n→ 식물 생장의 핵심 기작', type:'exam' },
+        { text:'기능 ③: 방어·색깔\n독성 화합물 저장 → 포식자 방어\n꽃 색소 저장 → 수분 곤충 유인', type:'eg' }
+      ]},
+
+      { text:'수축포 (민물 원생생물)', ch:[
+        { text:'세포 밖으로 여분의 물 펌프\n삼투압 조절\n예) 짚신벌레, 아메바', type:'eg' }
+      ]}
+    ]},
+
     { text:'★ 내막계 통합 경로', type:'exam', ch:[
-      { text:'ER → 골지체 → 소낭\n→ 분비/막/리소좀\n막과 단백질 유동 연결\n소낭(vesicle)이 운반체', type:'exam' }
+      { text:'핵막 → 조면ER → 활면ER\n→ 수송 소낭 → 골지체(시스)\n→ 골지체(트랜스) → 소낭 출아\n→ 리소좀·액포·세포막·분비', type:'exam' },
+      { text:'막 자체도 내막계 사이\n이동·변형되며 순환\n소낭이 막을 운반\n→ 세포막 표면적 확장', type:'exam' }
     ]}
+
   ]}
 },
 
@@ -298,20 +375,48 @@ const CONCEPTS = [
 { id:'c75', num:'7.5', label:'7.5 에너지 전환 소기관',
   color:'#0d9488', title:'미토콘드리아와 엽록체는 에너지를 전환하며, 세포내공생에서 유래했다',
   root:{kichul:['연세대 17·22'], text:'7.5\n에너지 전환\n소기관', ch:[
+
     { text:'★★ 미토콘드리아', type:'exam', ch:[
-      { text:'이중막 구조\n내막 → 크리스테(cristae) 형성\n기질(matrix): 크렙스 회로\n내막: 산화적 인산화', type:'exam' },
-      { text:'세포호흡 장소\nATP 생산\n자체 DNA·리보솜 보유\n이분열로 증식', type:'exam' }
+      { text:'구조 — 4개 구획', type:'comp', ch:[
+        { text:'외막\n포린(porin) 단백질 존재\n이온·소분자 자유 통과\n세균 외막과 유사', type:'exam' },
+        { text:'내막\n크리스테(cristae) 형성\n→ 표면적 극대화\nATP 합성효소·전자전달계 위치', type:'exam', ch:[
+          { text:'크리스테 주름이 많을수록\n→ 내막 표면적↑\n→ ATP 생산량↑\n활동적인 세포일수록 크리스테 발달', type:'eg' }
+        ]},
+        { text:'기질(matrix)\n크렙스 회로 효소 모음\n미토콘드리아 DNA·리보솜\nH₂O 생성', type:'exam' },
+        { text:'막간 공간\n외막·내막 사이\nH⁺ 펌핑으로 농도 높아짐\n→ 화학삼투로 ATP 합성', type:'exam' }
+      ]},
+      { text:'세포호흡 흐름', type:'exam', ch:[
+        { text:'해당과정(세포질)\n포도당 → 피루브산\nATP 소량 + NADH 생성', type:'exam' },
+        { text:'크렙스 회로(기질)\nAcetyl-CoA → CO₂\nNADH·FADH₂ 생성', type:'exam' },
+        { text:'전자전달계(내막)\nNADH·FADH₂ → ATP 대량 생산\n산소가 최종 전자 수용체', type:'exam' }
+      ]},
+      { text:'세포내공생 특성\n자체 DNA·리보솜 보유\n이분열로 증식\n세균 크기와 유사', type:'exam' }
     ]},
+
     { text:'★★ 엽록체(Chloroplast)', type:'exam', ch:[
-      { text:'이중막 + 틸라코이드막\n그라나(grana): 틸라코이드 더미\n스트로마(stroma): 캘빈회로\n광합성 장소', type:'exam' },
-      { text:'자체 DNA·리보솜 보유\n이분열로 증식\n식물·조류에 존재', type:'exam' }
+      { text:'구조 — 3종 막계', type:'comp', ch:[
+        { text:'외막·내막(이중막)\n이중막 구조\n내막 내부 전체 = 스트로마\n물질 선택적 투과', type:'exam' },
+        { text:'틸라코이드(Thylakoid)\n납작한 막주머니\n광계(PS Ⅱ·Ⅰ) 위치\n클로로필 분자 함유', type:'exam', ch:[
+          { text:'광반응 진행 장소\n빛 에너지 → ATP·NADPH\n물 분해 → O₂ 방출\n→ 엽록소가 빛 흡수', type:'exam' }
+        ]},
+        { text:'그라나(grana)\n틸라코이드 더미\n단수: granum\n스트로마 라멜라로 연결', type:'exam' },
+        { text:'스트로마(stroma)\n캘빈 회로 효소\n엽록체 DNA·리보솜\nCO₂ 고정(탄소 고정)', type:'exam', ch:[
+          { text:'암반응(캘빈 회로) 진행 장소\nCO₂ + ATP + NADPH\n→ G3P(포도당 전구체) 합성', type:'exam' }
+        ]}
+      ]},
+      { text:'세포내공생 특성\n자체 DNA·리보솜 보유\n이분열로 증식\n식물·조류에만 존재', type:'exam' }
     ]},
+
     { text:'★★ 세포내공생설\n(Endosymbiosis)', type:'exam', ch:[
-      { text:'미토콘드리아·엽록체\n원시 진핵세포가\n원핵세포를 삼킴\n공생 관계로 진화', type:'exam' },
-      { text:'증거\n이중막 구조\n자체 DNA·리보솜\n이분열 방식\n세균 크기와 유사', type:'exam' }
+      { text:'이론\n원시 진핵세포가\n원핵세포를 삼킴\n공생 관계로 진화', type:'exam' },
+      { text:'증거 ①: 이중막\n미토콘드리아·엽록체\n이중막 구조 보유\n내막 = 원시 세균의 세포막', type:'exam' },
+      { text:'증거 ②: 자체 유전체\n자체 DNA(원형, 히스톤 없음)\n→ 세균 DNA 유형과 유사\n세균 리보솜(70S)과 유사', type:'exam' },
+      { text:'증거 ③: 이분열 증식\n세포분열과 무관하게\n세균처럼 이분열로 증식\n세포 주기와 독립', type:'exam' },
+      { text:'증거 ④: 크기·구조\n세균과 유사한 크기\n항세균 항생제가 미토콘드리아에도 작용', type:'eg' }
     ]},
+
     { text:'액포(Vacuole)와 퍼옥시좀', ch:[
-      { text:'중심액포: 식물세포\n삼투압 조절·저장·팽압\n퍼옥시좀: 산화반응\nH₂O₂ 생성→분해' }
+      { text:'중심액포: 식물세포\n삼투압 조절·저장·팽압\n퍼옥시좀: 산화반응\nH₂O₂ 생성→분해', type:'exam' }
     ]}
   ]}
 },
@@ -321,19 +426,32 @@ const CONCEPTS = [
   color:'#dc2626', title:'세포골격은 세포 구조를 지지하고 운동과 조절 기능을 한다',
   root:{kichul:['연세대 2023'], text:'7.6\n세포골격\n(Cytoskeleton)', ch:[
     { text:'★★ 미세소관\n(Microtubule)', type:'exam', ch:[
-      { text:'튜불린 단백질 중합\n직경 25 nm\n세포 형태 지지\n소기관·소낭 이동 트랙', type:'exam' },
-      { text:'★ 편모·섬모\n9+2 구조\n다이닌 운동 단백질\n세포 이동·물질 이동', type:'exam' },
-      { text:'중심체(Centrosome)\n한 쌍의 중심립\n세포분열 시 방추사 형성\n동물세포에 존재', type:'exam' }
+      { text:'구조\n튜불린 단백질 중합\n직경 25 nm (가장 굵음)\n중공 원통형\n세포 형태 지지·트랙', type:'exam' },
+      { text:'★ 편모·섬모\n9+2 구조\n다이닌 운동 단백질\n세포 이동·물질 이동', type:'exam', ch:[
+        { text:'9+2 축사(axoneme)\n9쌍 주변 이중 미세소관\n+ 중심 2개 단일 미세소관\n방사살(radial spoke) 연결', type:'exam' },
+        { text:'다이닌 팔 기작\nATP 가수분해 → 미끄러짐\n인접 이중관 사이 작용\n→ 편모 굽힘 운동 발생', type:'exam' },
+        { text:'편모 vs 섬모\n편모: 수 개, 긴 채찍형\n섬모: 수백 개, 짧은 털 형\n기저체(기저소체)에 고정', type:'comp' }
+      ]},
+      { text:'중심체(Centrosome)\n한 쌍의 중심립\n세포분열 시 방추사 형성\n동물세포에 존재', type:'exam', ch:[
+        { text:'중심립 구조\n9개 미세소관 삼중관\n(9×3+0 구조)\n기저체와 구조 동일', type:'eg' }
+      ]}
     ]},
     { text:'★ 미세섬유\n(Microfilament)', type:'exam', ch:[
-      { text:'액틴 단백질 중합\n직경 7 nm\n세포 피질 형태 유지\n근육 수축·아메바 운동', type:'exam' },
+      { text:'구조\n액틴 단백질 중합\n직경 7 nm (가장 가늘)\n이중 나선형 섬유', type:'exam' },
+      { text:'기능\n세포 피질 형태 유지\n근육 수축·아메바 운동', type:'exam', ch:[
+        { text:'근육 수축 기작\n액틴(가는 섬유) + 미오신(굵은 섬유)\n미오신 머리가 ATP로 액틴 당김\n→ 근절 단축 → 근육 수축', type:'exam' }
+      ]},
       { text:'세포질유동(식물)\n위족 형성(아메바)\n미오신과 상호작용\n세포 운동 담당', type:'eg' }
     ]},
     { text:'중간섬유\n(Intermediate Filament)', ch:[
-      { text:'케라틴 등 다양한 단백질\n직경 8~12 nm\n장력 유지·핵 지지\n척추동물에만 존재' }
+      { text:'케라틴 등 다양한 단백질\n직경 8~12 nm\n장력 유지·핵 지지\n척추동물에만 존재', type:'exam', ch:[
+        { text:'세포 유형별 다른 단백질\n상피: 케라틴\n신경: 뉴로필라멘트\n근육: 데스민\n핵막: 라민', type:'eg' }
+      ]}
     ]},
     { text:'운동 단백질', type:'exam', ch:[
-      { text:'키네신·다이닌: 미세소관\n미오신: 미세섬유\nATP 가수분해로 이동\n소기관·염색체 운반', type:'exam' }
+      { text:'키네신·다이닌: 미세소관\n미오신: 미세섬유\nATP 가수분해로 이동\n소기관·염색체 운반', type:'exam', ch:[
+        { text:'키네신: 미세소관 +끝 방향\n(세포 말단 쪽으로 이동)\n다이닌: 미세소관 -끝 방향\n(세포 중심 쪽으로 이동)', type:'comp' }
+      ]}
     ]}
   ]}
 },
@@ -343,16 +461,39 @@ const CONCEPTS = [
   color:'#d97706', title:'세포 외부 구성요소와 세포간 연결은 조직 통합에 기여한다',
   root:{kichul:['연세대 22-23'], text:'7.7\n세포 외부\n구조', ch:[
     { text:'★ 식물세포벽', type:'exam', ch:[
-      { text:'셀룰로오스 미세섬유\n1차 세포벽(얇음·유연)\n2차 세포벽(두꺼움·단단)\n세포 보호·형태 유지', type:'exam' },
-      { text:'원형질연락사\n(Plasmodesmata)\n인접 세포벽의 구멍\n세포질 연결·물질 이동', type:'exam' }
+      { text:'셀룰로오스 미세섬유\n1차 세포벽(얇음·유연)\n2차 세포벽(두꺼움·단단)\n세포 보호·형태 유지', type:'exam', ch:[
+        { text:'1차 세포벽\n어린 세포에 있음\n유연하여 생장 가능\n셀룰로오스 + 펙틴·헤미셀룰로오스', type:'eg' },
+        { text:'2차 세포벽\n1차 세포벽 안쪽 형성\n목재 세포에서 발달\n리그닌 함침 → 단단·내구성', type:'eg' }
+      ]},
+      { text:'원형질연락사\n(Plasmodesmata)\n인접 세포벽의 구멍\n세포질 연결·물질 이동', type:'exam', ch:[
+        { text:'동물의 간극 연접과 유사 기능\n수분·영양소·신호물질 공유\n세포 공동체 형성\n식물에만 존재', type:'comp' }
+      ]}
     ]},
     { text:'★ 세포외기질(ECM)\n(동물세포)', type:'exam', ch:[
-      { text:'콜라젠·파이브로넥틴·프로테오글리칸\n세포 부착·이동·분열 조절\n신호 전달 역할\n인테그린으로 세포내와 연결', type:'exam' }
+      { text:'콜라젠(Collagen)\nECM 단백질 중 가장 풍부\n3중 나선 섬유 형성\n인장 강도 제공', type:'exam' },
+      { text:'파이브로넥틴(Fibronectin)\n세포를 ECM에 부착\nRGD 서열이 인테그린과 결합\n세포 이동·형태·분열 조절', type:'exam' },
+      { text:'프로테오글리칸\n단백질 + 글리코사미노글리칸\n겔 기질 형성 → 물 포집\n연골 탄성 부여', type:'exam' },
+      { text:'인테그린(Integrin)\n막관통 단백질\nECM ↔ 세포골격(액틴) 연결\n양방향 신호 전달', type:'exam', ch:[
+        { text:'세포 외부 신호\n→ 인테그린 → 액틴\n→ 세포 이동·유전자 발현 변화\n기계적 신호의 분자 경로', type:'eg' }
+      ]}
     ]},
     { text:'★ 세포간 연접\n(동물)', type:'comp', ch:[
-      { text:'밀착 연접\n(Tight junction)\n세포 사이 밀봉\n물질 이동 차단\n상피세포', type:'exam' },
-      { text:'데스모솜\n(Desmosome)\n세포 간 기계적 연결\n중간섬유 연결\n근육·피부', type:'exam' },
-      { text:'간극 연접\n(Gap junction)\n세포 간 통로\n이온·소분자 이동\n심근·신경 조
+      { text:'밀착 연접\n(Tight junction)\n세포 사이 밀봉\n물질 이동 차단\n상피세포', type:'exam', ch:[
+        { text:'인접 막 단백질이 맞잡음\n→ 세포 사이 간격 없음\n→ 세포 사이 경로 차단\n예) 방광 상피·장 상피', type:'eg' }
+      ]},
+      { text:'데스모솜\n(Desmosome)\n세포 간 기계적 연결\n중간섬유 연결\n근육·피부', type:'exam', ch:[
+        { text:'카데헤린 단백질로 연결\n중간섬유(케라틴·데스민)\n양쪽 세포에 닻 역할\n강한 인장력 견딤', type:'eg' }
+      ]},
+      { text:'간극 연접\n(Gap junction)\n세포 간 통로\n이온·소분자 이동\n심근·신경 조직', type:'exam', ch:[
+        { text:'코넥신 단백질 6개\n→ 코넥손(하나의 통로) 형성\n두 세포의 코넥손이 맞닿음\n→ 이온·신호물질 직접 이동', type:'eg' },
+        { text:'심근 세포간 간극 연접\n전기 신호 동기화\n→ 심장이 하나로 수축\n식물의 원형질연락사와 기능 유사', type:'comp' }
+      ]}
+    ]}
+  ]}
+}
+
+]; // end CONCEPTS
+
 // ENGINE
 // ═══════════════════════════════════════════════════════
 //  NODE STYLE
