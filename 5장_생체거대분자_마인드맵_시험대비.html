@@ -156,26 +156,24 @@ const CONCEPTS = [
 // ── 5.1 중합체/단량체 ─────────────────────────────────
 { id:'c51', num:'5.1', label:'5.1 중합체/단량체',
   color:'#3b82f6', title:'거대 분자는 단량체로 이루어진 중합체이다',
-  root:{ text:'5.1\n거대분자와\n중합체', ch:[
+  root:{kichul:['연세대 20-23'], text:'5.1\n거대분자와\n중합체', ch:[
     { text:'4가지 생체 거대분자', type:'exam', ch:[
       { text:'탄수화물\n단량체: 단당류', type:'exam' },
       { text:'단백질\n단량체: 아미노산', type:'exam' },
       { text:'핵산\n단량체: 뉴클레오타이드', type:'exam' },
       { text:'지질\n중합체 ✗ · 거대분자 ✗\n구성 성분이 다양', type:'warn' }
     ]},
-    { text:'합성\n탈수반응(Condensation)', type:'exam', ch:[
-      { text:'H₂O 방출' },
-      { text:'-OH(한쪽) + -H(다른쪽)\n→ 공유 결합 형성' },
-      { text:'효소가 촉진\n단량체 하나씩 추가' }
+    { text:'합성\n탈수 반응(Dehydration reaction)', type:'exam', ch:[
+      { text:'H₂O 방출\n-OH(한쪽) + -H(다른쪽)\n→ 공유 결합 형성', type:'exam' },
+      { text:'효소 촉매 반응\n단량체 하나씩 추가\n에너지 투입 필요(흡열)', type:'exam' }
     ]},
     { text:'분해\n가수분해(Hydrolysis)', type:'exam', ch:[
-      { text:'H₂O 첨가·삽입' },
-      { text:'결합 절단\n중합체 → 단량체' },
-      { text:'효소가 촉진' }
+      { text:'H₂O 첨가·삽입\n결합 절단\n중합체 → 단량체', type:'exam' },
+      { text:'효소 촉매 반응\n소화·재활용 과정\n예) 리소좀의 가수분해효소', type:'eg' }
     ]},
     { text:'단량체의 다양한 서열\n→ 무한히 다른 중합체', type:'eg', ch:[
-      { text:'아미노산 20종으로\n수만 종의 단백질 생성' },
-      { text:'뉴클레오타이드 4종으로\n수십억 bp의 DNA 암호' }
+      { text:'아미노산 20종\n→ 수만 종의 단백질 생성' },
+      { text:'뉴클레오타이드 4종\n→ 수십억 bp의 DNA 암호' }
     ]}
   ]}
 },
@@ -185,26 +183,34 @@ const CONCEPTS = [
   color:'#16a34a', title:'탄수화물은 연료와 구성물질의 역할을 한다',
   root:{ text:'5.2\n탄수화물', ch:[
     { text:'단당류(Monosaccharide)', ch:[
-      { text:'포도당 C₆H₁₂O₆\n알도오스: C1에 -CHO\n세포의 주요 연료', type:'exam' },
+      { text:'포도당 C₆H₁₂O₆\n알도오스: C1에 -CHO\n세포의 주요 연료', type:'exam', ch:[
+        { text:'고리형 포도당\nC1-OH 방향으로 α/β 결정\nα: C1-OH 아래(같은 쪽)\nβ: C1-OH 위(반대 쪽)', type:'exam' }
+      ]},
       { text:'과당 C₆H₁₂O₆\n케토오스: C2에 C=O\n포도당의 구조 이성질체', type:'exam' },
-      { text:'갈락토오스\n젖당의 구성 성분' }
+      { text:'갈락토오스\n젖당의 구성 성분\nC4-OH 방향만 포도당과 다름', type:'eg' }
     ]},
     { text:'이당류(Disaccharide)', ch:[
-      { text:'엿당: 포도당+포도당\n(α1→4 결합)' },
-      { text:'설탕: 포도당+과당\n식물의 탄수화물 운반 형태' },
-      { text:'젖당: 포도당+갈락토오스\n유제품 / 락타아제로 분해' }
+      { text:'엿당: 포도당+포도당\n(α1→4 결합)', type:'exam' },
+      { text:'설탕: 포도당+과당\n식물의 탄수화물 운반 형태', type:'exam' },
+      { text:'젖당: 포도당+갈락토오스\n유제품 / 락타아제로 분해', type:'exam' }
     ]},
     { text:'★ α결합 다당류\n저장성 / 소화 가능', type:'exam', ch:[
-      { text:'녹말(식물 저장)\nα(1→4): 아밀로오스 — 직선형\nα(1→6): 아밀로펙틴 — 분기점\n색소체에 저장', type:'exam' },
-      { text:'글리코젠(동물 저장)\nα결합 / 아밀로펙틴보다\n가지 더 많음\n간·근육세포 저장', type:'exam' }
+      { text:'녹말(식물 저장)\nα(1→4): 아밀로오스 — 직선형\nα(1→6): 아밀로펙틴 — 분기점\n색소체에 저장', type:'exam', ch:[
+        { text:'나선형 구조 형성\n→ 아이오딘 반응(청자색)\n아밀라아제로 분해', type:'eg' }
+      ]},
+      { text:'글리코젠(동물 저장)\nα결합 / 아밀로펙틴보다\n가지 더 많음\n간·근육세포 저장', type:'exam', ch:[
+        { text:'가지 많음 → 빠른 분해 가능\n혈당 급강하 시 간에서 방출\n글루카곤 신호로 분해', type:'eg' }
+      ]}
     ]},
     { text:'★ β결합 다당류\n구조적 / 사람 소화 불가', type:'warn', ch:[
-      { text:'셀룰로오스(식물 세포벽)\nβ(1→4) 직선형\n→ 수소결합으로 미세원섬유\n불용성 식이섬유', type:'exam' },
+      { text:'셀룰로오스(식물 세포벽)\nβ(1→4) 직선형\n→ 수소결합으로 미세원섬유\n불용성 식이섬유', type:'exam', ch:[
+        { text:'인접 가닥 사이 수소결합\n→ 단단한 미세원섬유 다발\n섬유소분해효소(셀룰라아제) 필요\n→ 초식동물 장내 미생물이 보유', type:'eg' }
+      ]},
       { text:'키틴(절지동물·균류)\nβ결합 + 질소 잔기(-NHCOCH₃)\n곤충·갑각류 외골격\n균류 세포벽', type:'exam' }
     ]},
     { text:'↔ α vs β 결합 구분', type:'comp', ch:[
-      { text:'α 결합\nC1-OH 고리 아래 방향\n→ 나선형 구조 형성\n→ 인간 소화 효소 있음' },
-      { text:'β 결합\nC1-OH 고리 위 방향\n→ 직선형 구조 형성\n→ 인간 소화 효소 없음\n(장내 미생물은 가능)' }
+      { text:'α 결합\nC1-OH 고리 아래 방향\n→ 나선형 구조 형성\n→ 인간 소화 효소 있음', type:'exam' },
+      { text:'β 결합\nC1-OH 고리 위 방향\n→ 직선형 구조 형성\n→ 인간 소화 효소 없음\n(장내 미생물은 가능)', type:'exam' }
     ]}
   ]}
 },
@@ -212,26 +218,32 @@ const CONCEPTS = [
 // ── 5.3 지질 ──────────────────────────────────────────
 { id:'c53', num:'5.3', label:'5.3 지질',
   color:'#d97706', title:'지질은 소수성 분자의 다양한 그룹이다',
-  root:{ text:'5.3\n지질\n(소수성)', ch:[
+  root:{kichul:['연세대 2026','고려대 2023'], text:'5.3\n지질\n(소수성)', ch:[
     { text:'지방(트리아실글리세롤)', ch:[
-      { text:'글리세롤 + 지방산 3개\n에스터 결합 (탈수반응)' },
+      { text:'글리세롤 + 지방산 3개\n에스터 결합 (탈수반응)', type:'exam' },
       { text:'★ 포화 지방산\n이중결합 없음 → 직선형\n→ 조밀 충전 → 고체(버터)\n동물성 / 동맥경화 위험', type:'exam' },
       { text:'★ 불포화 지방산\ncis 이중결합 → 꺾임 구조\n→ 조밀 충전 불가 → 액체(올리브유)\ntrans 지방: 수소화 과정 부산물', type:'exam' },
-      { text:'기능\n에너지 저장(다당류의 2배)\n단열 / 장기 보호' }
+      { text:'기능\n에너지 저장(다당류의 2배)\n단열 / 장기 보호', type:'exam' }
     ]},
     { text:'★★ 인지질(Phospholipid)\n세포막의 핵심 성분', type:'exam', ch:[
-      { text:'글리세롤 + 지방산 2개\n+ 인산기(음전하)' },
-      { text:'친수성 머리(인산기+콜린)\n+ 소수성 꼬리(지방산 2개)', type:'exam' },
-      { text:'★ 물에서 자발적으로\n이중층(bilayer) 형성\n→ 세포막의 기본 구조', type:'exam' }
+      { text:'구조\n글리세롤 + 지방산 2개\n+ 인산기(음전하)', type:'exam' },
+      { text:'친수성 머리(인산기+콜린)\n+ 소수성 꼬리(지방산 2개)', type:'exam', ch:[
+        { text:'양친매성(amphipathic)\n→ 물에서 미셀 또는\n이중층 자발 형성\n열역학적으로 유리', type:'exam' }
+      ]},
+      { text:'★ 물에서 자발적으로\n이중층(bilayer) 형성\n→ 세포막의 기본 구조', type:'exam', ch:[
+        { text:'소수성 꼬리가 내부를 향해 숨음\n친수성 머리가 수용액 접촉\n유동 모자이크 모델의 기초', type:'eg' }
+      ]}
     ]},
     { text:'스테로이드(Steroid)', ch:[
       { text:'★ 4개의 융합된 탄소 고리\n공통 골격 구조', type:'exam' },
-      { text:'★ 콜레스테롤\n동물 세포막 구성\n성호르몬 전구체', type:'exam' },
-      { text:'성호르몬\n에스트라디올(여성)\n테스토스테론(남성)\n→ 지질이므로 소수성' }
+      { text:'★ 콜레스테롤\n동물 세포막 구성\n성호르몬 전구체', type:'exam', ch:[
+        { text:'적정 농도: 막 유동성 조절\n과다: LDL↑ → 동맥경화\n스테로이드 호르몬·담즙산 원료', type:'eg' }
+      ]},
+      { text:'성호르몬\n에스트라디올(여성)\n테스토스테론(남성)\n→ 지질이므로 소수성', type:'exam' }
     ]},
     { text:'↔ 지방 vs 인지질\n구조 차이', type:'comp', ch:[
-      { text:'지방: 글리세롤 + 지방산 3개\n소수성 전체\n→ 에너지 저장' },
-      { text:'인지질: 글리세롤 + 지방산 2개\n+ 인산기\n양친매성 → 세포막 형성' }
+      { text:'지방: 글리세롤 + 지방산 3개\n소수성 전체\n→ 에너지 저장', type:'exam' },
+      { text:'인지질: 글리세롤 + 지방산 2개\n+ 인산기\n양친매성 → 세포막 형성', type:'exam' }
     ]}
   ]}
 },
@@ -239,47 +251,59 @@ const CONCEPTS = [
 // ── 5.4 단백질 ────────────────────────────────────────
 { id:'c54', num:'5.4', label:'5.4 단백질',
   color:'#7c3aed', title:'단백질은 다양한 구조로 되어 있어서 광범위한 기능을 수행한다',
-  root:{ text:'5.4\n단백질', ch:[
+  root:{kichul:['연세대 21·24','고려대 2022'], text:'5.4\n단백질', ch:[
     { text:'단백질 기능(8가지)', ch:[
       { text:'효소: 화학반응 촉매\n물질대사 조절', type:'exam' },
       { text:'방어: 항체\n바이러스·세균 불활성화', type:'exam' },
       { text:'수송: 헤모글로빈\nO₂ 폐 → 조직', type:'exam' },
-      { text:'저장 / 호르몬(인슐린)\n수용체 / 운동 / 구조' }
+      { text:'저장 / 호르몬(인슐린)\n수용체 / 운동 / 구조', type:'exam' }
     ]},
     { text:'아미노산(20종)\n공통구조: 아미노기+카르복실기+R기', ch:[
-      { text:'비극성(소수성) R기\nGly·Ala·Val·Leu·Ile\nPro·Met·Phe·Trp' },
-      { text:'극성(친수성) R기\nSer·Thr·Cys·Tyr·Asn·Gln' },
+      { text:'비극성(소수성) R기\nGly·Ala·Val·Leu·Ile\nPro·Met·Phe·Trp', type:'exam' },
+      { text:'극성(친수성) R기\nSer·Thr·Cys·Tyr·Asn·Gln', type:'exam' },
       { text:'산성 R기 — 음전하(−)\nAsp · Glu\npH7에서 —COO⁻', type:'exam' },
       { text:'염기성 R기 — 양전하(+)\nLys · Arg · His\npH7에서 —NH₃⁺', type:'exam' }
     ]},
     { text:'★★ 단백질 구조 4단계', type:'exam', ch:[
       { text:'1차 구조\n아미노산 서열', type:'exam', ch:[
-        { text:'N말단→C말단 아미노산 순서\n유전자(DNA)가 결정' },
+        { text:'N말단→C말단 아미노산 순서\n유전자(DNA)가 결정\n펩타이드 결합(CO-NH)\n탈수반응으로 형성', type:'exam' },
         { text:'낫모양적혈구빈혈증\nβ사슬 6번: Glu→Val 치환\n→ 소수성으로 변해 단백질 뭉침\n→ 낫 모양 변형 → 혈관 폐색', type:'warn' }
       ]},
       { text:'2차 구조\n★ 골격(backbone)의 수소결합', type:'exam', ch:[
-        { text:'α나선(α helix)\n골격 N-H···O=C 수소결합\n매 4번째 AA 간\n나선형 코일 / 예) 케라틴', type:'exam' },
-        { text:'β병풍구조(β pleated sheet)\n인접 β가닥 사이 수소결합\n평행·역평행 배열\n예) 거미줄 비단 단백질', type:'exam' }
+        { text:'α나선(α helix)\n골격 N-H···O=C 수소결합\n매 4번째 AA 간\n나선형 코일 / 예) 케라틴', type:'exam', ch:[
+          { text:'한 회전당 3.6개 아미노산\nR기는 나선 바깥쪽 돌출\n오른나선 방향\n안정적·유연한 구조', type:'eg' }
+        ]},
+        { text:'β병풍구조(β pleated sheet)\n인접 β가닥 사이 수소결합\n평행·역평행 배열\n예) 거미줄 비단 단백질', type:'exam', ch:[
+          { text:'역평행: 가닥들 반대 방향\n(더 안정적)\n평행: 가닥들 같은 방향\nR기는 판 위아래 교대 돌출', type:'eg' }
+        ]},
+        { text:'⚠ 2차 구조 핵심\n결합: 골격 원자 간 수소결합만\nR기(곁사슬)는 무관\n골격만 관여한다는 점 필수 암기', type:'warn' }
       ]},
       { text:'3차 구조\n★ R기(곁사슬) 간 상호작용', type:'exam', ch:[
-        { text:'소수성 상호작용\n비극성 R기 → 단백질 중심부\n실제로 물에 의해 배제되는 효과', type:'exam' },
-        { text:'수소결합\n극성 R기 사이' },
-        { text:'이온결합\n양전하(+) R기 ↔ 음전하(−) R기' },
-        { text:'이황화결합 —S—S—\nCys-Cys 간 공유결합\n(가장 강한 3차 결합)', type:'exam' }
+        { text:'소수성 상호작용\n비극성 R기 → 단백질 중심부\n물 분자 엔트로피 증가가 구동\n3차 구조 형성의 주요 원동력', type:'exam' },
+        { text:'수소결합\n극성 R기 사이\n(골격 수소결합과 다름)\n소수성 내부 이외 부분에서 형성', type:'exam' },
+        { text:'이온결합(염다리)\n+R기(Lys·Arg·His)\n↔ -R기(Asp·Glu) 간\npH 변화 시 끊어질 수 있음', type:'exam' },
+        { text:'이황화결합 —S—S—\nCys-Cys 간 공유결합\n산화반응으로 형성\n3차 구조 중 가장 강한 결합', type:'exam', ch:[
+          { text:'세포 외부 단백질에서 흔함\n예) 케라틴(모발), 인슐린\n환원제로 끊을 수 있음\n→ 파마 원리', type:'eg' }
+        ]}
       ]},
       { text:'4차 구조\n★ 2개 이상 폴리펩타이드 소단위체', type:'exam', ch:[
-        { text:'헤모글로빈: α₂β₂\n총 4개 폴리펩타이드\n+ 헴기(Fe²⁺): 산소결합', type:'exam' },
-        { text:'트랜스티레틴: 동일 4량체\n비타민A·갑상샘호르몬 수송' }
+        { text:'헤모글로빈: α₂β₂\n총 4개 폴리펩타이드\n+ 헴기(Fe²⁺): 산소결합', type:'exam', ch:[
+          { text:'협동성(Cooperativity)\n1개 O₂ 결합 → 나머지 3개\n친화력 증가\n폐에서 O₂ 적재·조직서 방출', type:'exam' }
+        ]},
+        { text:'콜라젠: 3중 나선\n3개 폴리펩타이드 꼬임\nECM의 주요 구조 단백질', type:'eg' },
+        { text:'소단위체 간 결합\n수소결합·소수성·이온결합\n→ 4차 구조에 해당하는\n비공유 결합들', type:'exam' }
       ]}
     ]},
     { text:'↔ 2차 vs 3차 구조\n핵심 차이 — 시험 빈출', type:'comp', ch:[
-      { text:'2차 구조\n결합: 골격(backbone) 원자 간\n수소결합만\n→ R기 무관, 골격만 관여\n결과: α나선·β병풍' },
-      { text:'3차 구조\n결합: R기(곁사슬) 간 상호작용\n→ 소수성·수소·이온·이황화\n결과: 전체 3D 형태 결정' }
+      { text:'2차 구조\n결합: 골격(backbone) 원자 간\n수소결합만\n→ R기 무관\n결과: α나선·β병풍', type:'exam' },
+      { text:'3차 구조\n결합: R기(곁사슬) 간 상호작용\n→ 소수성·수소·이온·이황화\n결과: 전체 3D 형태 결정', type:'exam' }
     ]},
     { text:'변성(Denaturation)', type:'warn', ch:[
-      { text:'원인: pH 변화·고온\n유기용매·화학물질' },
-      { text:'기전: 약한 결합(수소결합·\n이온결합 등) 파괴\n→ 고유 형태 상실' },
-      { text:'결과: 생물학적 활성 소실\n예) 달걀 흰자 요리 시 응고\n고열이 치명적인 이유', type:'eg' }
+      { text:'원인: pH 변화·고온\n유기용매·화학물질', type:'exam' },
+      { text:'기전: 약한 결합(수소결합·\n이온결합·소수성) 파괴\n→ 고유 형태 상실', type:'exam' },
+      { text:'결과: 생물학적 활성 소실\n예) 달걀 흰자 요리 시 응고\n고열이 치명적인 이유', type:'eg', ch:[
+        { text:'복원(renaturation) 가능성\n변성 조건 제거 시\n1차 구조(서열)가 3차 구조 결정\n→ 자발적 재접힘 가능', type:'eg' }
+      ]}
     ]}
   ]}
 },
@@ -287,28 +311,33 @@ const CONCEPTS = [
 // ── 5.5 핵산 ──────────────────────────────────────────
 { id:'c55', num:'5.5', label:'5.5 핵산',
   color:'#dc2626', title:'핵산은 유전정보를 저장하고 전달하며 발현되도록 돕는다',
-  root:{ text:'5.5\n핵산', ch:[
+  root:{kichul:['연세대 22-23'], text:'5.5\n핵산', ch:[
     { text:'뉴클레오타이드\n(단량체 구조)', type:'exam', ch:[
       { text:'5탄당(펜토스)\nDNA: 디옥시리보오스\nRNA: 리보오스\n(2번 탄소에 -OH → -H)', type:'exam' },
-      { text:'질소성 염기\n당의 1번 탄소에 연결' },
-      { text:'인산기\n당의 5번 탄소(5\')에 연결\n→ 인산디에스터 결합으로 중합' }
+      { text:'질소성 염기\n당의 1번 탄소에 연결', type:'exam' },
+      { text:'인산기\n당의 5번 탄소(5\')에 연결\n→ 인산디에스터 결합으로 중합\n(3\'OH + 5\'인산)', type:'exam' }
     ]},
     { text:'★ 질소성 염기 구분', type:'exam', ch:[
       { text:'퓨린(이중 고리, 큰 것)\nA(아데닌): DNA·RNA 공통\nG(구아닌): DNA·RNA 공통', type:'exam' },
-      { text:'피리미딘(단일 고리, 작은 것)\nC(사이토신): DNA·RNA 공통\nT(타이민): DNA에만\nU(유라실): RNA에만', type:'exam' }
+      { text:'피리미딘(단일 고리, 작은 것)\nC(사이토신): DNA·RNA 공통\nT(타이민): DNA에만\nU(유라실): RNA에만', type:'exam' },
+      { text:'⚠ 퓨린-피리미딘 쌍\nA↔T(U), G↔C 상보 결합\n퓨린(큰)+피리미딘(작은)\n→ 이중나선 폭 일정 유지', type:'warn' }
     ]},
     { text:'↔ DNA vs RNA 비교', type:'comp', ch:[
       { text:'DNA\n당: 디옥시리보오스\n염기: A T G C\n구조: 이중나선\n기능: 유전정보 저장·복제', type:'exam' },
       { text:'RNA\n당: 리보오스\n염기: A U G C (T→U)\n구조: 단일가닥\n기능: 전사·번역 관여', type:'exam' }
     ]},
     { text:'★ DNA 이중나선 구조', type:'exam', ch:[
-      { text:'당-인산 골격: 나선 바깥쪽\n질소성 염기: 나선 안쪽에서 쌍' },
-      { text:'역평행(antiparallel)\n한 가닥: 5\'→3\' 방향\n다른 가닥: 3\'→5\' 방향', type:'exam' },
-      { text:'★ 상보적 염기쌍(수소결합)\nA—T: 수소결합 2개\nG—C: 수소결합 3개\n→ 상보성으로 복제 가능', type:'exam' }
+      { text:'당-인산 골격: 나선 바깥쪽\n질소성 염기: 나선 안쪽에서 쌍\n이중나선 직경: ~2 nm', type:'exam' },
+      { text:'역평행(antiparallel)\n한 가닥: 5\'→3\' 방향\n다른 가닥: 3\'→5\' 방향\n→ 항상 반대 방향으로 배열', type:'exam', ch:[
+        { text:'5\'말단: 인산기 노출\n3\'말단: -OH 노출\n복제·전사 모두 5\'→3\' 방향\n역평행 배열이 복제 기작 결정', type:'eg' }
+      ]},
+      { text:'★ 상보적 염기쌍(수소결합)\nA—T: 수소결합 2개\nG—C: 수소결합 3개\n→ 상보성으로 복제 가능', type:'exam', ch:[
+        { text:'GC 함량 높을수록\n수소결합 많음 → 열 안정성↑\n이중나선 분리(용해) 온도↑\n→ 생물 종 간 GC 함량 비교 가능', type:'eg' }
+      ]}
     ]},
     { text:'유전자 발현\n(Gene Expression)', type:'exam', ch:[
-      { text:'전사(Transcription)\nDNA → mRNA\n핵 내에서 진행' },
-      { text:'번역(Translation)\nmRNA → 폴리펩타이드\n리보솜(세포질)에서 진행' },
+      { text:'전사(Transcription)\nDNA → mRNA\n핵 내에서 진행', type:'exam' },
+      { text:'번역(Translation)\nmRNA → 폴리펩타이드\n리보솜(세포질)에서 진행', type:'exam' },
       { text:'★ 정보 흐름\nDNA → RNA → 단백질\n분자생물학의 중심 원리', type:'exam' }
     ]}
   ]}
@@ -328,12 +357,12 @@ const CONCEPTS = [
     ]},
     { text:'★ 진화 연구 응용', type:'exam', ch:[
       { text:'유연관계가 가까울수록\nDNA·단백질 서열 유사', type:'exam' },
-      { text:'사람-침팬지: 95~98% 동일\n사람-쥐: ~85% 동일\n예) 하마-고래 공통조상 확인' }
+      { text:'사람-침팬지: 95~98% 동일\n사람-쥐: ~85% 동일\n예) 하마-고래 공통조상 확인', type:'eg' }
     ]},
     { text:'응용 분야', ch:[
-      { text:'의학\n암 유전자 분석\n개인맞춤형 항암 치료' },
-      { text:'고생물학\n네안데르탈인 DNA 해독\n→ 형태·현대인과 관계 파악' },
-      { text:'보전생물학\n코끼리 상아 DNA 분석\n→ 불법 밀렵 지역 특정' }
+      { text:'의학\n암 유전자 분석\n개인맞춤형 항암 치료', type:'eg' },
+      { text:'고생물학\n네안데르탈인 DNA 해독\n→ 형태·현대인과 관계 파악', type:'eg' },
+      { text:'보전생물학\n코끼리 상아 DNA 분석\n→ 불법 밀렵 지역 특정', type:'eg' }
     ]}
   ]}
 }
@@ -357,7 +386,7 @@ const FIG_MAP = {
 
   // ── 그림 5.2 ─────────────────────────────────────────
   // "탄수화물·단백질 중합체의 합성(탈수반응)과 분해(가수분해)"
-  '합성\n탈수반응(Condensation)':
+  '합성\n탈수 반응(Dehydration reaction)':
       '5.2',
   '분해\n가수분해(Hydrolysis)':
       '5.2',
@@ -1063,6 +1092,369 @@ document.addEventListener('click', e => {
   const popup = document.getElementById('fig-popup');
   if (e.target === popup) closeFigPopup();
 });
+</script>
+<style>
+#sec-quiz{max-width:780px;margin:0 auto;padding:16px 12px 60px;color:#e2e8f0;font-family:inherit}
+.quiz-header{text-align:center;padding:20px 0 12px;border-bottom:1px solid #334155;margin-bottom:20px}
+.quiz-header h2{font-size:18px;color:#f8fafc;margin:0 0 6px}
+.quiz-header p{font-size:12px;color:#94a3b8;margin:0}
+.lock-banner{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px 20px;text-align:center;margin-bottom:20px}
+.lock-banner .lock-icon{font-size:32px;margin-bottom:8px}
+.lock-banner h3{font-size:14px;color:#cbd5e1;margin:0 0 6px}
+.lock-banner p{font-size:12px;color:#64748b;margin:0}
+.unlock-badge{background:linear-gradient(135deg,#065f46,#047857);border-radius:12px;padding:14px 18px;text-align:center;margin-bottom:20px;display:none}
+.unlock-badge h3{font-size:14px;color:#6ee7b7;margin:0 0 4px}
+.unlock-badge p{font-size:12px;color:#a7f3d0;margin:0}
+.ox-container{background:#1e293b;border-radius:14px;padding:20px;margin-bottom:20px}
+.ox-progress-bar{background:#0f172a;border-radius:4px;height:6px;margin-bottom:16px;overflow:hidden}
+.ox-progress-fill{height:100%;background:#3b82f6;transition:width .3s;border-radius:4px}
+.ox-qnum{font-size:11px;color:#64748b;margin-bottom:8px}
+.ox-node-hint{font-size:11px;color:#818cf8;background:#1e1b4b;border-radius:6px;padding:4px 10px;display:inline-block;margin-bottom:14px}
+.ox-question{font-size:14px;line-height:1.7;color:#e2e8f0;margin-bottom:20px;min-height:60px}
+.ox-btn-row{display:flex;gap:12px;justify-content:center}
+.ox-btn{flex:1;max-width:180px;padding:12px 0;border:2px solid transparent;border-radius:10px;cursor:pointer;font-size:16px;font-weight:700;transition:all .15s;background:#0f172a;color:#e2e8f0}
+.ox-btn:hover{transform:scale(1.04)}
+.ox-btn.o-btn{border-color:#22c55e;color:#4ade80}
+.ox-btn.x-btn{border-color:#ef4444;color:#f87171}
+.ox-btn.sel-correct{background:#14532d;border-color:#22c55e;color:#4ade80}
+.ox-btn.sel-wrong{background:#450a0a;border-color:#ef4444;color:#f87171}
+.ox-btn.show-correct{background:#14532d;border-color:#22c55e;color:#4ade80}
+.ox-feedback{margin-top:14px;font-size:12px;line-height:1.6;padding:10px 14px;border-radius:8px;display:none}
+.ox-feedback.correct{background:#052e16;color:#86efac;border-left:3px solid #22c55e}
+.ox-feedback.wrong{background:#2d0000;color:#fca5a5;border-left:3px solid #ef4444}
+.ox-next-btn{width:100%;margin-top:12px;padding:10px;background:#334155;color:#f8fafc;border:none;border-radius:8px;cursor:pointer;font-size:13px;display:none;transition:background .15s}
+.ox-next-btn:hover{background:#475569}
+.ox-result{text-align:center;padding:20px 0}
+.score-circle{width:90px;height:90px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800}
+.score-pass{background:#14532d;color:#4ade80;border:3px solid #22c55e}
+.score-fail{background:#450a0a;color:#f87171;border:3px solid #ef4444}
+.ox-result h3{font-size:16px;margin:0 0 6px}
+.ox-result p{font-size:12px;color:#94a3b8;margin:0 0 16px}
+.ox-retry-btn{padding:10px 28px;background:#1e3a5f;color:#93c5fd;border:1px solid #3b82f6;border-radius:8px;cursor:pointer;font-size:13px}
+.nq-section-title{font-size:13px;color:#94a3b8;margin:24px 0 12px;display:flex;align-items:center;gap:8px}
+.nq-section-title::before,.nq-section-title::after{content:'';flex:1;height:1px;background:#334155}
+.nq-card{background:#1e293b;border-radius:12px;padding:18px;margin-bottom:14px;border-left:3px solid #7c3aed}
+.nq-meta{font-size:11px;color:#818cf8;margin-bottom:8px}
+.nq-node-tag{display:inline-block;background:#1e1b4b;color:#a5b4fc;border-radius:5px;padding:2px 8px;font-size:11px;margin-bottom:10px}
+.nq-lock-msg{display:flex;align-items:center;gap:10px;padding:14px 0 4px;color:#475569;font-size:13px}
+.nq-question{font-size:13px;color:#e2e8f0;line-height:1.7;margin-bottom:14px}
+.nq-option{display:block;width:100%;text-align:left;background:#0f172a;border:1px solid #334155;border-radius:7px;padding:8px 12px;margin-bottom:6px;cursor:pointer;color:#cbd5e1;font-size:12.5px;transition:all .12s}
+.nq-option:hover:not(:disabled){border-color:#7c3aed;background:#1e1b4b}
+.nq-option.correct{background:#052e16;border-color:#22c55e;color:#86efac}
+.nq-option.wrong{background:#2d0000;border-color:#ef4444;color:#fca5a5}
+.nq-option.reveal{background:#052e16;border-color:#22c55e;color:#86efac}
+.nq-explanation{margin-top:10px;font-size:12px;line-height:1.65;color:#94a3b8;padding:10px 12px;background:#0f172a;border-radius:7px;display:none}
+.nq-explanation.show{display:block}
+</style>
+<script>
+(function(){
+  const CH_KEY='quiz5_unlocked';
+  let isUnlocked=localStorage.getItem(CH_KEY)==='1';
+
+const OX=[
+  // ── c51 중합체/단량체 (5문) ──────────────────
+  {section:'c51',sLabel:'5.1 중합체·단량체',
+   node:'5.1 중합체·단량체',ans:true,
+   q:'탈수 반응(dehydration reaction)은 단량체들이 결합할 때 물 분자가 방출되는 반응이다.',
+   fb:'맞다. 단량체 연결 시 물이 빠져나가는 탈수(축합) 반응이며, 가수분해는 그 역반응이다.'},
+  {section:'c51',sLabel:'5.1 중합체·단량체',
+   node:'5.1 중합체·단량체',ans:false,
+   q:'가수분해(hydrolysis)는 물이 제거되면서 공유결합이 새로 형성되는 반응이다.',
+   fb:'틀리다. 가수분해는 물이 첨가(H₂O 투입)되면서 공유결합이 끊어지는 분해 반응이다.'},
+  {section:'c51',sLabel:'5.1 중합체·단량체',
+   node:'5.1 중합체·단량체',ans:true,
+   q:'단백질·탄수화물·핵산은 모두 중합체(polymer)이지만, 지질은 중합체가 아니다.',
+   fb:'맞다. 지질은 반복 단량체 단위 없이 조립되므로 고분자 중합체로 분류하지 않는다.'},
+  {section:'c51',sLabel:'5.1 중합체·단량체',
+   node:'5.1 중합체·단량체',ans:false,
+   q:'탄수화물·단백질·핵산은 모두 동일한 방식의 결합으로 단량체가 연결된다.',
+   fb:'틀리다. 탄수화물은 글리코사이드 결합, 단백질은 펩타이드 결합, 핵산은 인산다이에스터 결합으로 서로 다르다.'},
+  {section:'c51',sLabel:'5.1 중합체·단량체',
+   node:'5.1 중합체·단량체',ans:true,
+   q:'세포에서 탈수 반응과 가수분해 반응은 모두 효소에 의해 촉매된다.',
+   fb:'맞다. 중합화와 분해 반응 모두 해당 효소(예: 글리코시다제, 프로테아제 등)가 필요하다.'},
+
+  // ── c52 탄수화물 (5문) ───────────────────────
+  {section:'c52',sLabel:'5.2 탄수화물',
+   node:'5.2 탄수화물',ans:true,
+   q:'포도당과 과당(fructose)은 분자식(C₆H₁₂O₆)은 같지만 구조가 다른 이성질체이다.',
+   fb:'맞다. 포도당과 과당은 구조 이성질체(structural isomer)이며, 포도당은 알도오스, 과당은 케토오스이다.'},
+  {section:'c52',sLabel:'5.2 탄수화물',
+   node:'5.2 탄수화물',ans:false,
+   q:'녹말(starch)과 셀룰로오스(cellulose)는 모두 포도당 중합체이며, 사람은 둘 다 소화할 수 있다.',
+   fb:'틀리다. 셀룰로오스는 β-1,4 글리코사이드 결합으로 구성되어 사람은 소화 효소가 없어 분해 불가하다.'},
+  {section:'c52',sLabel:'5.2 탄수화물',
+   node:'5.2 탄수화물',ans:true,
+   q:'글리코겐(glycogen)은 동물 세포(주로 간·근육)에서 포도당을 저장하는 다당류이다.',
+   fb:'맞다. 글리코겐은 α-1,4 및 α-1,6 결합의 고도 가지분기 구조로 빠른 포도당 방출이 가능하다.'},
+  {section:'c52',sLabel:'5.2 탄수화물',
+   node:'5.2 탄수화물',ans:true,
+   q:'셀룰로오스의 β 결합은 교호 배치 포도당 구조를 만들어, 수소결합으로 안정화된 미세섬유를 형성한다.',
+   fb:'맞다. β-1,4 결합으로 교대 배치된 포도당 사슬들이 수소결합으로 평행하게 결속되어 강한 섬유를 형성한다.'},
+  {section:'c52',sLabel:'5.2 탄수화물',
+   node:'5.2 탄수화물',ans:false,
+   q:'수크로오스(sucrose)는 포도당 2분자가 결합한 이당류이다.',
+   fb:'틀리다. 수크로오스(설탕)는 포도당과 과당이 결합한 이당류이다. 포도당 2분자로 된 이당류는 말토오스이다.'},
+
+  // ── c53 지질 (5문) ───────────────────────────
+  {section:'c53',sLabel:'5.3 지질',
+   node:'5.3 지질',ans:true,
+   q:'지방(fat)은 글리세롤 1분자에 지방산 3분자가 에스터 결합으로 연결된 트라이아실글리세롤이다.',
+   fb:'맞다. 3개의 에스터 결합(탈수 반응) 형성 시 물 3분자 방출 → 중성지방(트라이글리세리드) 생성.'},
+  {section:'c53',sLabel:'5.3 지질',
+   node:'5.3 지질',ans:false,
+   q:'불포화 지방산은 탄소 사슬에 이중 결합이 없어 상온에서 고체 상태인 경우가 많다.',
+   fb:'틀리다. 이중 결합이 있는 것이 불포화 지방산이며, 이중 결합의 꺾임 구조로 인해 상온에서 액체(기름)이다.'},
+  {section:'c53',sLabel:'5.3 지질',
+   node:'5.3 지질',ans:true,
+   q:'인지질(phospholipid)은 글리세롤, 2개의 지방산, 1개의 인산기(+ 머리기)로 구성된 양친매성 분자이다.',
+   fb:'맞다. 소수성 꼬리(지방산 2개)와 친수성 머리(인산·극성기)로 이중막 구조를 자발 형성한다.'},
+  {section:'c53',sLabel:'5.3 지질',
+   node:'5.3 지질',ans:true,
+   q:'스테로이드는 4개의 융합 탄소 고리를 기본 골격으로 하며, 콜레스테롤은 동물 세포막의 중요한 성분이다.',
+   fb:'맞다. 콜레스테롤은 동물 세포막의 유동성을 온도에 따라 조절하는 역할을 한다.'},
+  {section:'c53',sLabel:'5.3 지질',
+   node:'5.3 지질',ans:false,
+   q:'포화 지방산으로만 구성된 지방은 이중 결합으로 사슬이 꺾여 있어 분자 간 밀집이 어렵다.',
+   fb:'틀리다. 꺾임(bend)은 불포화 지방산의 특성이다. 포화 지방산은 직선형으로 촘촘히 쌓여 상온에서 고체.'},
+
+  // ── c54 단백질 (5문) ─────────────────────────
+  {section:'c54',sLabel:'5.4 단백질',
+   node:'5.4 단백질',ans:true,
+   q:'아미노산의 R기(곁사슬) 차이가 각 아미노산의 고유한 화학적 특성과 기능을 결정한다.',
+   fb:'맞다. 20종의 아미노산 차이는 R기에 있으며, 극성·비극성·하전 여부 등이 단백질 구조·기능에 영향.'},
+  {section:'c54',sLabel:'5.4 단백질',
+   node:'5.4 단백질',ans:true,
+   q:'펩타이드 결합(peptide bond)은 한 아미노산의 카복실기(-COOH)와 다른 아미노산의 아미노기(-NH₂) 사이에 형성되는 공유결합이다.',
+   fb:'맞다. 탈수 반응으로 물이 방출되면서 -CO-NH- 결합이 생성된다.'},
+  {section:'c54',sLabel:'5.4 단백질',
+   node:'5.4 단백질',ans:false,
+   q:'단백질 2차 구조(α나선·β병풍)는 주로 R기 사이의 소수성 상호작용에 의해 안정화된다.',
+   fb:'틀리다. 2차 구조는 폴리펩타이드 주쇄(backbone)의 카보닐기(C=O)와 아미노기(N-H) 사이의 수소결합으로 안정화된다.'},
+  {section:'c54',sLabel:'5.4 단백질',
+   node:'5.4 단백질',ans:true,
+   q:'단백질 3차 구조는 소수성 상호작용, 수소결합, 이온결합, 이황화 결합 등 다양한 힘으로 유지된다.',
+   fb:'맞다. 이 4종의 비공유·공유 상호작용이 폴리펩타이드 사슬의 최종 3차원 구조를 결정한다.'},
+  {section:'c54',sLabel:'5.4 단백질',
+   node:'5.4 단백질',ans:false,
+   q:'변성(denaturation)된 단백질은 아미노산 서열(1차 구조)이 변하여 기능을 잃는다.',
+   fb:'틀리다. 변성 시 1차 구조(아미노산 서열)는 유지되지만, 수소결합 등이 끊어져 고차 구조(3차·4차)가 풀린다.'},
+
+  // ── c55 핵산 (5문) ───────────────────────────
+  {section:'c55',sLabel:'5.5 핵산',
+   node:'5.5 핵산',ans:true,
+   q:'DNA 이중 나선에서 A-T는 2중 수소결합, G-C는 3중 수소결합을 형성한다.',
+   fb:'맞다. A-T 2개, G-C 3개의 수소결합으로 연결되므로 G-C 비율이 높을수록 열에 더 안정하다.'},
+  {section:'c55',sLabel:'5.5 핵산',
+   node:'5.5 핵산',ans:true,
+   q:'뉴클레오타이드는 오탄당(펜토오스), 인산기, 질소 염기 3가지로 구성된 DNA·RNA의 단량체이다.',
+   fb:'맞다. 뉴클레오타이드가 인산다이에스터 결합으로 연결되어 폴리뉴클레오타이드(DNA/RNA) 사슬이 형성된다.'},
+  {section:'c55',sLabel:'5.5 핵산',
+   node:'5.5 핵산',ans:false,
+   q:'RNA는 DNA와 달리 단일 가닥이므로 내부에서 상보적 수소결합을 전혀 형성하지 않는다.',
+   fb:'틀리다. tRNA·rRNA 등은 단일 가닥이지만 루프·줄기 구조로 내부에서 상보적 수소결합을 형성한다.'},
+  {section:'c55',sLabel:'5.5 핵산',
+   node:'5.5 핵산',ans:true,
+   q:'DNA에는 타이민(T)이 있고, RNA에는 우라실(U)이 있으며, 두 염기 모두 아데닌(A)과 쌍을 이룬다.',
+   fb:'맞다. DNA: A-T 쌍(2수소결합) / RNA: A-U 쌍. 우라실은 타이민에서 메틸기가 없는 구조이다.'},
+  {section:'c55',sLabel:'5.5 핵산',
+   node:'5.5 핵산',ans:false,
+   q:'DNA와 RNA 모두 당-인산 골격이 3\'→5\' 방향으로 합성된다.',
+   fb:'틀리다. 핵산은 항상 5\'→3\' 방향으로 합성된다(새로운 뉴클레오타이드가 3\' 말단에 추가).'},
+
+  // ── c56 유전체학 (5문) ───────────────────────
+  {section:'c56',sLabel:'5.6 유전체학',
+   node:'5.6 유전체학',ans:true,
+   q:'인간 유전체(genome)에서 단백질을 암호화하는 엑손 서열은 전체의 약 1.5%에 불과하다.',
+   fb:'맞다. 나머지는 인트론·조절 서열·반복 서열 등 비암호화 서열이며, 이들도 중요한 기능을 한다.'},
+  {section:'c56',sLabel:'5.6 유전체학',
+   node:'5.6 유전체학',ans:false,
+   q:'기능유전체학(functional genomics)은 특정 생물의 전체 DNA 염기 서열을 밝히는 학문이다.',
+   fb:'틀리다. 염기 서열 해독은 유전체학(genomics/sequencing). 기능유전체학은 유전자 발현 및 기능을 연구한다.'},
+  {section:'c56',sLabel:'5.6 유전체학',
+   node:'5.6 유전체학',ans:true,
+   q:'단백질체(proteome)는 특정 세포 또는 조직이 특정 시점에 발현하는 모든 단백질의 집합이다.',
+   fb:'맞다. 유전체는 고정되어 있지만 단백질체는 세포 유형·환경·발달 단계에 따라 달라진다.'},
+  {section:'c56',sLabel:'5.6 유전체학',
+   node:'5.6 유전체학',ans:true,
+   q:'비교유전체학은 여러 종의 유전체 서열을 비교하여 진화적 관계와 유전자 기능을 추론한다.',
+   fb:'맞다. 종간 보존 서열이 기능적으로 중요함을 의미하며, 기능 미지 유전자 연구에 활용된다.'},
+  {section:'c56',sLabel:'5.6 유전체학',
+   node:'5.6 유전체학',ans:false,
+   q:'유전체(genome) 크기(DNA 총량)가 클수록 생물의 복잡성이 항상 더 높다.',
+   fb:'틀리다. "C값 역설(C-value paradox)": 양파·도롱뇽 등 겉보기에 단순한 생물이 인간보다 유전체가 더 큰 경우가 많다.'}
+];
+
+const NQ=[
+  {meta:'연세대 2020',nodeId:'c51',nodeLabel:'5.1 가수분해',
+   q:'다음 중 가수분해(hydrolysis)에 해당하는 것은?',
+   opts:['① 단당류와 단당류가 결합하여 이당류를 형성','② 아미노산과 아미노산이 펩타이드 결합을 형성','③ 인산·당·염기가 결합하여 뉴클레오타이드를 형성','④ 지방이 분해되어 글리세롤과 지방산이 생성'],
+   ans:3,expl:'가수분해는 물이 투입되어 공유결합이 끊어지는 반응. 지방(트라이글리세리드)→글리세롤+지방산이 대표적 가수분해 예시.'},
+  {meta:'연세대 2021',nodeId:'c54',nodeLabel:'5.4 아미노산 구조',
+   q:'20종의 아미노산에 대한 설명으로 옳지 않은 것은?',
+   opts:['① 모든 아미노산은 중심 탄소에 아미노기, 카복실기, 수소, R기가 붙어있다','② R기가 비극성 지방족이면 물에 잘 녹지 않는다','③ 아미노산의 산-염기 특성은 R기에 의해 결정된다','④ 시스테인의 R기는 설프하이드릴(-SH)기를 가지며, 이황화 결합 형성이 가능하다'],
+   ans:2,expl:'아미노산의 산-염기 특성은 R기뿐만 아니라 α-아미노기와 α-카복실기에 의해서도 결정된다. 보기 ③이 틀린 설명.'},
+  {meta:'연세대 2021',nodeId:'c51',nodeLabel:'5.1 생체분자 개요',
+   q:'탄수화물, 지질, 단백질, 핵산에 대한 설명으로 옳은 것은?',
+   opts:['① 지질은 단량체가 반복되는 중합체이다','② 인지질은 소수성·친수성 양쪽 성질을 가진 양친매성 분자이다','③ 모든 단백질은 4차 구조를 가진다','④ DNA와 RNA는 동일한 당을 포함한다'],
+   ans:1,expl:'인지질은 친수성 머리(인산기)와 소수성 꼬리(지방산 2개)를 가진 양친매성 분자로 세포막 이중층의 기본 단위이다.'},
+  {meta:'연세대 2021',nodeId:'c54',nodeLabel:'5.4 단백질 구조',
+   q:'단백질에 대한 설명으로 가장 옳은 것은?',
+   opts:['① 2차 구조는 R기 사이의 소수성 상호작용으로 형성된다','② α나선과 β병풍은 폴리펩타이드 주쇄의 수소결합으로 안정화된다','③ 3차 구조는 열이나 강산에 의해 안정화된다','④ 4차 구조는 모든 단백질에서 반드시 나타난다'],
+   ans:1,expl:'α나선과 β병풍(2차 구조)은 폴리펩타이드 골격의 카보닐기(C=O)와 아미노기(N-H) 사이의 수소결합으로 안정화된다.'},
+  {meta:'연세대 2022',nodeId:'c55',nodeLabel:'5.5 핵산·중합체',
+   q:'고분자 화합물 중 중합체(polymer)가 아닌 것은?',
+   opts:['① 단백질(protein)','② DNA','③ 글리코겐(glycogen)','④ 지방(fat, triacylglycerol)'],
+   ans:3,expl:'지방은 글리세롤+지방산 3개의 에스터 결합이지만, 반복 단량체 단위로 이루어진 중합체가 아니다. 단백질·DNA·글리코겐은 각각 아미노산·뉴클레오타이드·포도당의 중합체.'},
+  {meta:'연세대 2023',nodeId:'c51',nodeLabel:'5.1 거대분자',
+   q:'생물의 주요 거대분자(macromolecule)에 대한 설명 중 맞는 것은?',
+   opts:['① 다당류는 모두 물에 잘 녹는 수용성 물질이다','② 단백질은 펩타이드 결합으로 연결된 아미노산의 중합체이다','③ 지질은 탄수화물보다 에너지 저장 효율이 낮다','④ RNA는 이중 가닥 구조로만 존재한다'],
+   ans:1,expl:'단백질은 탈수 반응으로 형성된 펩타이드 결합(-CO-NH-)으로 연결된 아미노산 중합체이다. 다당류 중 셀룰로오스는 물에 잘 녹지 않는다.'},
+  {meta:'연세대 2023',nodeId:'c55',nodeLabel:'5.5 핵산 구조',
+   q:'핵산(nucleic acid)에 대한 설명 중 틀린 것은?',
+   opts:['① DNA는 이중 나선 구조를 이루며 A-T, G-C로 상보적 염기쌍을 형성한다','② RNA는 주로 단일 가닥이며 우라실(U)이 아데닌(A)과 쌍을 이룬다','③ 뉴클레오타이드는 오탄당, 인산기, 염기로 구성된다','④ DNA 합성 방향은 3\'→5\'이다'],
+   ans:3,expl:'DNA(및 RNA) 합성은 항상 5\'→3\' 방향으로 진행된다(새 뉴클레오타이드가 성장 가닥의 3\' 말단에 추가). 4번이 틀린 설명.'},
+  {meta:'연세대 2024',nodeId:'c54',nodeLabel:'5.4 단백질 2·3차구조',
+   q:'단백질 구조에 대한 설명으로 옳지 않은 것은?',
+   opts:['① 2차 구조는 주쇄(backbone)의 수소결합에 의해 형성된다','② 3차 구조 안정화에 이황화 결합, 이온결합, 소수성 상호작용이 관여한다','③ 열이나 강한 산에 의한 변성은 아미노산 서열(1차 구조)을 파괴한다','④ 헤모글로빈은 4차 구조를 갖는 단백질이다'],
+   ans:2,expl:'변성(denaturation)은 고차 구조(2·3·4차)를 파괴하지만 펩타이드 결합(1차 구조=아미노산 서열)은 그대로 유지된다.'},
+  {meta:'연세대(약대) 2026',nodeId:'c53',nodeLabel:'5.3 지방 구조',
+   q:'지방(fat)에 대한 설명 중 옳은 것은?',
+   opts:['① 지방은 글리세롤과 지방산이 펩타이드 결합으로 연결된다','② 지방은 글리세롤 1분자와 지방산 3분자가 에스터 결합으로 이루어진다','③ 불포화 지방산은 이중 결합이 없어 상온에서 고체이다','④ 지방은 반복 단량체가 있는 중합체이다'],
+   ans:1,expl:'지방(트라이아실글리세롤)은 글리세롤 1분자에 지방산 3분자가 에스터 결합(-COO-)으로 연결된 구조이다. 결합 형성 시 물 3분자 방출.'},
+  {meta:'고려대 2022',nodeId:'c54',nodeLabel:'5.4 3차구조 결합',
+   q:'단백질 3차 구조를 안정화하는 아미노산 곁사슬(R기) 간 상호작용으로 옳지 않은 것은?',
+   opts:['① 소수성 상호작용','② 수소결합','③ 이온결합(이온 간 정전기 인력)','④ 인산다이에스터 결합'],
+   ans:3,expl:'인산다이에스터 결합은 핵산 골격에서 나타나는 결합이다. 단백질 3차 구조 안정화에는 소수성 상호작용, 수소결합, 이온결합, 이황화 결합이 관여한다.'},
+  {meta:'고려대 2023',nodeId:'c53',nodeLabel:'5.3 지방·인지질 비교',
+   q:'지방(fat)과 인지질(phospholipid)의 구조 차이로 옳은 것은?',
+   opts:['① 지방은 글리세롤+지방산 2개, 인지질은 글리세롤+지방산 3개로 구성된다','② 인지질은 글리세롤+지방산 2개+인산기(극성 머리)이며, 지방은 글리세롤+지방산 3개이다','③ 지방과 인지질 모두 에스터 결합이 없다','④ 인지질은 소수성이며 세포막을 구성하지 않는다'],
+   ans:1,expl:'지방: 글리세롤+지방산 3개(에스터 결합 3개). 인지질: 글리세롤+지방산 2개+인산기(친수성 머리). 인지질은 세포막 이중층의 기본 단위.'}
+];
+
+  let oxIdx=0,oxScore=0,oxDone=false;
+
+  function buildNQCard(q,qi,unlocked){
+    const card=document.createElement('div');
+    card.className='nq-card'; card.id='nqcard-'+qi;
+    const meta=`<div class="nq-meta">📄 ${q.meta}</div><div class="nq-node-tag">📍 ${q.nodeLabel}</div>`;
+    if(!unlocked){
+      card.innerHTML=meta+`<div class="nq-lock-msg"><span style="font-size:22px">🔒</span><span>OX 퀴즈 80점 이상 달성 후 열립니다</span></div>`;
+      return card;
+    }
+    card.innerHTML=meta+`<div class="nq-question">${q.q}</div>`+
+      q.opts.map((o,oi)=>`<button class="nq-option" data-oi="${oi}">${o}</button>`).join('')+
+      `<div class="nq-explanation" id="nqexpl-${qi}">💡 <strong>해설:</strong> ${q.expl}</div>`;
+    card.querySelectorAll('.nq-option').forEach(btn=>{
+      btn.addEventListener('click',function(){
+        const oi=+this.dataset.oi;
+        card.querySelectorAll('.nq-option').forEach((b,bi)=>{b.disabled=true;if(bi===q.ans)b.classList.add('reveal');});
+        this.classList.add(oi===q.ans?'correct':'wrong');
+        document.getElementById('nqexpl-'+qi).classList.add('show');
+      });
+    });
+    return card;
+  }
+
+  function unlockNQ(){
+    NQ.forEach((q,qi)=>{
+      const old=document.getElementById('nqcard-'+qi);
+      if(old){const nc=buildNQCard(q,qi,true);old.parentNode.replaceChild(nc,old);}
+    });
+    const banner=document.querySelector('.lock-banner,.unlock-badge');
+    if(banner){banner.className='unlock-badge';banner.style.display='block';
+      banner.innerHTML='<h3>🔓 기출 연결 문제 활성화됨!</h3><p>OX 퀴즈 통과 기록이 저장되었습니다</p>';}
+  }
+
+  function renderOX(box){
+    box.innerHTML='';
+    if(oxDone){renderResult(box);return;}
+    const q=OX[oxIdx];
+    const pct=(oxIdx/OX.length*100).toFixed(0);
+    const el=document.createElement('div');
+    el.innerHTML=`
+      <div class="ox-progress-bar"><div class="ox-progress-fill" style="width:${pct}%"></div></div>
+      <div class="ox-qnum">문제 ${oxIdx+1} / ${OX.length} <span style="opacity:.5;font-size:.85em">(${q.sLabel||q.node})</span></div>
+      <div class="ox-node-hint">📍 ${q.node}</div>
+      <div class="ox-question">${q.q}</div>
+      <div class="ox-btn-row">
+        <button class="ox-btn o-btn" id="oxO">⭕ 맞다 (O)</button>
+        <button class="ox-btn x-btn" id="oxX">❌ 틀리다 (X)</button>
+      </div>
+      <div class="ox-feedback" id="oxFb"></div>
+      <button class="ox-next-btn" id="oxNext" style="display:none">${oxIdx+1<OX.length?'다음 문제 →':'결과 확인'}</button>`;
+    box.appendChild(el);
+    const oBtn=el.querySelector('#oxO'),xBtn=el.querySelector('#oxX');
+    const fb=el.querySelector('#oxFb'),nxt=el.querySelector('#oxNext');
+    let answered=false;
+    function pick(sel){
+      if(answered)return; answered=true;
+      const ok=(sel===q.ans); if(ok)oxScore++;
+      oBtn.disabled=xBtn.disabled=true;
+      if(q.ans===true)oBtn.classList.add('show-correct'); else xBtn.classList.add('show-correct');
+      if(ok){(sel===true?oBtn:xBtn).classList.add('sel-correct');}
+      else{(sel===true?oBtn:xBtn).classList.add('sel-wrong');}
+      fb.className='ox-feedback '+(ok?'correct':'wrong');
+      fb.innerHTML=(ok?'✅ 정답! ':'❌ 오답! ')+q.fb;
+      fb.style.display='block'; nxt.style.display='block';
+    }
+    oBtn.addEventListener('click',()=>pick(true));
+    xBtn.addEventListener('click',()=>pick(false));
+    nxt.addEventListener('click',()=>{oxIdx++;if(oxIdx>=OX.length)oxDone=true;renderOX(box);});
+  }
+
+  function renderResult(box){
+    const pct=Math.round(oxScore/OX.length*100); const pass=pct>=80;
+    if(pass&&!isUnlocked){isUnlocked=true;localStorage.setItem(CH_KEY,'1');}
+    box.innerHTML=`
+      <div class="ox-result">
+        <div class="score-circle ${pass?'score-pass':'score-fail'}">${pct}점</div>
+        <h3>${pass?'🎉 통과! 기출 문제 활성화!':'😅 아쉽네요...'}</h3>
+        <p>${oxScore}/${OX.length} 정답${pass?' · 기출 연결 문제가 활성화되었습니다.':' · 80점 이상이면 기출 문제가 열립니다.'}</p>
+        <button class="ox-retry-btn" id="oxRetry">🔄 다시 풀기</button>
+      </div>`;
+    box.querySelector('#oxRetry').addEventListener('click',()=>{oxIdx=0;oxScore=0;oxDone=false;renderQuiz();});
+    if(pass)unlockNQ();
+  }
+
+  function renderQuiz(){
+    isUnlocked=localStorage.getItem(CH_KEY)==='1';
+    qSec.innerHTML='';
+    qSec.innerHTML=`<div class="quiz-header"><h2>5장 생체 거대분자 — 시험 대비 퀴즈</h2><p>OX 퀴즈 80점 이상 달성 시 기출 연결 문제가 활성화됩니다</p></div>`;
+    const banner=document.createElement('div');
+    if(isUnlocked){banner.className='unlock-badge';banner.style.display='block';banner.innerHTML='<h3>🔓 기출 연결 문제 활성화됨</h3><p>OX 퀴즈 통과 기록이 있습니다</p>';}
+    else{banner.className='lock-banner';banner.innerHTML='<div class="lock-icon">🔒</div><h3>기출 연결 문제 잠금 중</h3><p>아래 OX 퀴즈에서 80점 이상을 달성하면 자동으로 활성화됩니다</p>';}
+    qSec.appendChild(banner);
+    const oxBox=document.createElement('div');
+    oxBox.className='ox-container'; qSec.appendChild(oxBox); renderOX(oxBox);
+    const nqTitle=document.createElement('div');
+    nqTitle.className='nq-section-title';nqTitle.textContent='📌 연고대 기출 연결 문제';
+    qSec.appendChild(nqTitle);
+    NQ.forEach((q,qi)=>qSec.appendChild(buildNQCard(q,qi,isUnlocked)));
+  }
+
+  const tabBar=document.getElementById('tabBar'),mapArea=document.getElementById('mapArea');
+  const qBtn=document.createElement('button');
+  qBtn.className='tab-btn';qBtn.innerHTML='📝 OX 퀴즈';
+  tabBar.appendChild(qBtn);
+  const qSec=document.createElement('div');
+  qSec.className='map-section';qSec.id='sec-quiz';
+  mapArea.appendChild(qSec);
+
+  qBtn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');b.style.color=b.style.borderColor=''});
+    qBtn.classList.add('active');qBtn.style.color='#818cf8';qBtn.style.borderColor='#818cf8';
+    document.querySelectorAll('.map-section').forEach(s=>s.classList.remove('active'));
+    qSec.classList.add('active');
+    if(!qSec.hasChildNodes())renderQuiz();
+  });
+  qBtn.click();
+  setTimeout(()=>{
+    const first=tabBar.querySelector('.tab-btn:not(#quizTabBtn)');
+    if(first)first.click();
+    qBtn.id='quizTabBtn';
+  },50);
+})();
 </script>
 </body>
 </html>

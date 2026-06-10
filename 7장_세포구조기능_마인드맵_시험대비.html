@@ -221,7 +221,7 @@ const CONCEPTS = [
 // ── 7.1 세포 연구 방법 ────────────────────────────────────
 { id:'c71', num:'7.1', label:'7.1 세포 연구 방법',
   color:'#0891b2', title:'생물학자들은 세포 연구를 위해 현미경과 생화학적 도구를 이용한다',
-  root:{ text:'7.1\n세포 연구\n방법', ch:[
+  root:{kichul:['연세대 17-26'], text:'7.1\n세포 연구\n방법', ch:[
     { text:'★ 현미경 종류', type:'comp', ch:[
       { text:'광학현미경(LM)\n가시광선 이용\n최대 분해능 0.2 μm\n살아있는 세포 관찰 가능', type:'exam' },
       { text:'전자현미경(EM)\n전자빔 이용\n분해능 0.2 nm (1000배↑)\n살아있는 세포 관찰 불가', type:'exam' },
@@ -240,7 +240,7 @@ const CONCEPTS = [
 // ── 7.2 원핵세포와 진핵세포 ──────────────────────────────
 { id:'c72', num:'7.2', label:'7.2 원핵·진핵세포',
   color:'#7c3aed', title:'진핵세포는 막으로 싸인 소기관을 가지며, 원핵세포보다 복잡하다',
-  root:{ text:'7.2\n원핵세포 vs\n진핵세포', ch:[
+  root:{kichul:['연세대 21-22'], text:'7.2\n원핵세포 vs\n진핵세포', ch:[
     { text:'★★ 원핵세포 vs 진핵세포', type:'comp', ch:[
       { text:'원핵세포(Prokaryotic)\n핵막 없음 · 핵양체(nucleoid)\n막성 소기관 없음\n세균·고세균', type:'exam' },
       { text:'진핵세포(Eukaryotic)\n핵막 있음 · 진정한 핵\n막성 소기관 있음\n동물·식물·균류·원생생물', type:'exam' }
@@ -258,7 +258,7 @@ const CONCEPTS = [
 // ── 7.3 핵과 리보솜 ──────────────────────────────────────
 { id:'c73', num:'7.3', label:'7.3 핵과 리보솜',
   color:'#16a34a', title:'진핵세포의 유전정보는 핵 안에 있으며, 리보솜에 의해 번역된다',
-  root:{ text:'7.3\n핵과\n리보솜', ch:[
+  root:{kichul:['연세대 2022','고려대 2022'], text:'7.3\n핵과\n리보솜', ch:[
     { text:'★★ 핵(Nucleus)', type:'exam', ch:[
       { text:'핵막(Nuclear envelope)\n이중막 구조\n핵공(Nuclear pore) 존재\nRNA·단백질 통과', type:'exam' },
       { text:'염색질(Chromatin)\nDNA + 히스톤 단백질\n세포분열 시 염색체로 응축\n유전정보 저장', type:'exam' },
@@ -267,7 +267,7 @@ const CONCEPTS = [
     { text:'★ 리보솜(Ribosome)', type:'exam', ch:[
       { text:'rRNA + 단백질 구성\n대·소 두 소단위체\n단백질 합성(번역) 수행\n모든 세포에 존재', type:'exam' },
       { text:'자유리보솜\n세포질에 유리\n세포질 내 단백질 합성\n예) 대사효소', type:'comp' },
-      { text:'부착리보솜\n거친면 소포체에 결합\n분비·막·소기관 단백질 합성\n예) 소화효소·인슐린', type:'comp' }
+      { text:'부착리보솜\n조면소포체에 결합\n분비·막·소기관 단백질 합성\n예) 소화효소·인슐린', type:'comp' }
     ]}
   ]}
 },
@@ -275,13 +275,13 @@ const CONCEPTS = [
 // ── 7.4 내막계 ────────────────────────────────────────────
 { id:'c74', num:'7.4', label:'7.4 내막계',
   color:'#ea580c', title:'내막계는 단백질 이동을 조절하고 세포의 물질대사 기능을 수행한다',
-  root:{ text:'7.4\n내막계\n(Endomembrane\nSystem)', ch:[
+  root:{kichul:['연세대 17-24','고려대 21·24'], text:'7.4\n내막계\n(Endomembrane\nSystem)', ch:[
     { text:'★★ 소포체(ER)', type:'exam', ch:[
-      { text:'거친면 소포체(rER)\n부착리보솜 있음\n분비 단백질 합성·가공\n막 단백질 삽입', type:'exam' },
-      { text:'매끈면 소포체(sER)\n리보솜 없음\n지질·스테로이드 합성\n칼슘 저장·독소 해독', type:'exam' }
+      { text:'조면소포체(rER)\n부착리보솜 있음\n분비 단백질 합성·가공\n막 단백질 삽입', type:'exam' },
+      { text:'활면소포체(sER)\n리보솜 없음\n지질·스테로이드 합성\n칼슘 저장·독소 해독', type:'exam' }
     ]},
     { text:'★★ 골지체(Golgi)', type:'exam', ch:[
-      { text:'납작한 막주머니\n(시스터나) 더미\ncis면(ER쪽) → trans면(세포막쪽)\n단백질 수령·가공·분류·발송', type:'exam' },
+      { text:'납작한 막주머니\n(시스터나) 더미\n시스 면(소낭 수령·소포체쪽) → 트랜스 면(소낭이 성장 후 떨어져 나가는 쪽)\n단백질 수령·가공·분류·발송', type:'exam' },
       { text:'단백질 당화(glycosylation)\n수송 소낭으로 발송\n분비·리소좀·막으로 분류\n세포의 "우체국"', type:'exam' }
     ]},
     { text:'★ 리소좀(Lysosome)', type:'exam', ch:[
@@ -297,9 +297,9 @@ const CONCEPTS = [
 // ── 7.5 에너지 전환 소기관 ───────────────────────────────
 { id:'c75', num:'7.5', label:'7.5 에너지 전환 소기관',
   color:'#0d9488', title:'미토콘드리아와 엽록체는 에너지를 전환하며, 세포내공생에서 유래했다',
-  root:{ text:'7.5\n에너지 전환\n소기관', ch:[
+  root:{kichul:['연세대 17·22'], text:'7.5\n에너지 전환\n소기관', ch:[
     { text:'★★ 미토콘드리아', type:'exam', ch:[
-      { text:'이중막 구조\n내막 → 크리스타(cristae) 형성\n기질(matrix): 크렙스 회로\n내막: 산화적 인산화', type:'exam' },
+      { text:'이중막 구조\n내막 → 크리스테(cristae) 형성\n기질(matrix): 크렙스 회로\n내막: 산화적 인산화', type:'exam' },
       { text:'세포호흡 장소\nATP 생산\n자체 DNA·리보솜 보유\n이분열로 증식', type:'exam' }
     ]},
     { text:'★★ 엽록체(Chloroplast)', type:'exam', ch:[
@@ -319,7 +319,7 @@ const CONCEPTS = [
 // ── 7.6 세포골격 ─────────────────────────────────────────
 { id:'c76', num:'7.6', label:'7.6 세포골격',
   color:'#dc2626', title:'세포골격은 세포 구조를 지지하고 운동과 조절 기능을 한다',
-  root:{ text:'7.6\n세포골격\n(Cytoskeleton)', ch:[
+  root:{kichul:['연세대 2023'], text:'7.6\n세포골격\n(Cytoskeleton)', ch:[
     { text:'★★ 미세소관\n(Microtubule)', type:'exam', ch:[
       { text:'튜불린 단백질 중합\n직경 25 nm\n세포 형태 지지\n소기관·소낭 이동 트랙', type:'exam' },
       { text:'★ 편모·섬모\n9+2 구조\n다이닌 운동 단백질\n세포 이동·물질 이동', type:'exam' },
@@ -341,24 +341,18 @@ const CONCEPTS = [
 // ── 7.7 세포 외부 구조 ───────────────────────────────────
 { id:'c77', num:'7.7', label:'7.7 세포 외부 구조',
   color:'#d97706', title:'세포 외부 구성요소와 세포간 연결은 조직 통합에 기여한다',
-  root:{ text:'7.7\n세포 외부\n구조', ch:[
+  root:{kichul:['연세대 22-23'], text:'7.7\n세포 외부\n구조', ch:[
     { text:'★ 식물세포벽', type:'exam', ch:[
       { text:'셀룰로오스 미세섬유\n1차 세포벽(얇음·유연)\n2차 세포벽(두꺼움·단단)\n세포 보호·형태 유지', type:'exam' },
       { text:'원형질연락사\n(Plasmodesmata)\n인접 세포벽의 구멍\n세포질 연결·물질 이동', type:'exam' }
     ]},
     { text:'★ 세포외기질(ECM)\n(동물세포)', type:'exam', ch:[
-      { text:'콜라젠·피브로넥틴·프로테오글리칸\n세포 부착·이동·분열 조절\n신호 전달 역할\n인테그린으로 세포내와 연결', type:'exam' }
+      { text:'콜라젠·파이브로넥틴·프로테오글리칸\n세포 부착·이동·분열 조절\n신호 전달 역할\n인테그린으로 세포내와 연결', type:'exam' }
     ]},
     { text:'★ 세포간 연접\n(동물)', type:'comp', ch:[
       { text:'밀착 연접\n(Tight junction)\n세포 사이 밀봉\n물질 이동 차단\n상피세포', type:'exam' },
       { text:'데스모솜\n(Desmosome)\n세포 간 기계적 연결\n중간섬유 연결\n근육·피부', type:'exam' },
-      { text:'간극 연접\n(Gap junction)\n세포 간 통로\n이온·소분자 이동\n심근·신경 조직', type:'exam' }
-    ]}
-  ]}
-}
-
-]; // end CONCEPTS
-
+      { text:'간극 연접\n(Gap junction)\n세포 간 통로\n이온·소분자 이동\n심근·신경 조
 // ENGINE
 // ═══════════════════════════════════════════════════════
 //  NODE STYLE
@@ -797,6 +791,452 @@ CONCEPTS.forEach((c, i) => {
   mapArea.appendChild(sec);
 });
 
+</script>
+<style>
+#sec-quiz{max-width:780px;margin:0 auto;padding:16px 12px 60px;color:#e2e8f0;font-family:inherit}
+.quiz-header{text-align:center;padding:20px 0 12px;border-bottom:1px solid #334155;margin-bottom:20px}
+.quiz-header h2{font-size:18px;color:#f8fafc;margin:0 0 6px}
+.quiz-header p{font-size:12px;color:#94a3b8;margin:0}
+.lock-banner{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px 20px;text-align:center;margin-bottom:20px}
+.lock-banner .lock-icon{font-size:32px;margin-bottom:8px}
+.lock-banner h3{font-size:14px;color:#cbd5e1;margin:0 0 6px}
+.lock-banner p{font-size:12px;color:#64748b;margin:0}
+.unlock-badge{background:linear-gradient(135deg,#065f46,#047857);border-radius:12px;padding:14px 18px;text-align:center;margin-bottom:20px;display:none}
+.unlock-badge h3{font-size:14px;color:#6ee7b7;margin:0 0 4px}
+.unlock-badge p{font-size:12px;color:#a7f3d0;margin:0}
+.ox-container{background:#1e293b;border-radius:14px;padding:20px;margin-bottom:20px}
+.ox-progress-bar{background:#0f172a;border-radius:4px;height:6px;margin-bottom:16px;overflow:hidden}
+.ox-progress-fill{height:100%;background:#3b82f6;transition:width .3s;border-radius:4px}
+.ox-qnum{font-size:11px;color:#64748b;margin-bottom:8px}
+.ox-node-hint{font-size:11px;color:#818cf8;background:#1e1b4b;border-radius:6px;padding:4px 10px;display:inline-block;margin-bottom:14px}
+.ox-question{font-size:14px;line-height:1.7;color:#e2e8f0;margin-bottom:20px;min-height:60px}
+.ox-btn-row{display:flex;gap:12px;justify-content:center}
+.ox-btn{flex:1;max-width:180px;padding:12px 0;border:2px solid transparent;border-radius:10px;cursor:pointer;font-size:16px;font-weight:700;transition:all .15s;background:#0f172a;color:#e2e8f0}
+.ox-btn:hover{transform:scale(1.04)}
+.ox-btn.o-btn{border-color:#22c55e;color:#4ade80}
+.ox-btn.x-btn{border-color:#ef4444;color:#f87171}
+.ox-btn.sel-correct{background:#14532d;border-color:#22c55e;color:#4ade80}
+.ox-btn.sel-wrong{background:#450a0a;border-color:#ef4444;color:#f87171}
+.ox-btn.show-correct{background:#14532d;border-color:#22c55e;color:#4ade80}
+.ox-feedback{margin-top:14px;font-size:12px;line-height:1.6;padding:10px 14px;border-radius:8px;display:none}
+.ox-feedback.correct{background:#052e16;color:#86efac;border-left:3px solid #22c55e}
+.ox-feedback.wrong{background:#2d0000;color:#fca5a5;border-left:3px solid #ef4444}
+.ox-next-btn{width:100%;margin-top:12px;padding:10px;background:#334155;color:#f8fafc;border:none;border-radius:8px;cursor:pointer;font-size:13px;display:none;transition:background .15s}
+.ox-next-btn:hover{background:#475569}
+.ox-result{text-align:center;padding:20px 0}
+.score-circle{width:90px;height:90px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800}
+.score-pass{background:#14532d;color:#4ade80;border:3px solid #22c55e}
+.score-fail{background:#450a0a;color:#f87171;border:3px solid #ef4444}
+.ox-result h3{font-size:16px;margin:0 0 6px}
+.ox-result p{font-size:12px;color:#94a3b8;margin:0 0 16px}
+.ox-retry-btn{padding:10px 28px;background:#1e3a5f;color:#93c5fd;border:1px solid #3b82f6;border-radius:8px;cursor:pointer;font-size:13px}
+.nq-section-title{font-size:13px;color:#94a3b8;margin:24px 0 12px;display:flex;align-items:center;gap:8px}
+.nq-section-title::before,.nq-section-title::after{content:'';flex:1;height:1px;background:#334155}
+.nq-card{background:#1e293b;border-radius:12px;padding:18px;margin-bottom:14px;border-left:3px solid #7c3aed}
+.nq-meta{font-size:11px;color:#818cf8;margin-bottom:8px}
+.nq-node-tag{display:inline-block;background:#1e1b4b;color:#a5b4fc;border-radius:5px;padding:2px 8px;font-size:11px;margin-bottom:10px}
+.nq-lock-msg{display:flex;align-items:center;gap:10px;padding:14px 0 4px;color:#475569;font-size:13px}
+.nq-question{font-size:13px;color:#e2e8f0;line-height:1.7;margin-bottom:14px}
+.nq-option{display:block;width:100%;text-align:left;background:#0f172a;border:1px solid #334155;border-radius:7px;padding:8px 12px;margin-bottom:6px;cursor:pointer;color:#cbd5e1;font-size:12.5px;transition:all .12s}
+.nq-option:hover:not(:disabled){border-color:#7c3aed;background:#1e1b4b}
+.nq-option.correct{background:#052e16;border-color:#22c55e;color:#86efac}
+.nq-option.wrong{background:#2d0000;border-color:#ef4444;color:#fca5a5}
+.nq-option.reveal{background:#052e16;border-color:#22c55e;color:#86efac}
+.nq-explanation{margin-top:10px;font-size:12px;line-height:1.65;color:#94a3b8;padding:10px 12px;background:#0f172a;border-radius:7px;display:none}
+.nq-explanation.show{display:block}
+</style>
+<script>
+(function(){
+  const CH_KEY='quiz7_unlocked';
+  let isUnlocked=localStorage.getItem(CH_KEY)==='1';
+
+const OX=[
+  // ── c71 세포 연구 방법 (5문) ─────────────────
+  {section:'c71',sLabel:'7.1 세포 연구 방법',node:'7.1 세포 연구 방법',ans:true,
+   q:'투과전자현미경(TEM)은 분해능이 약 2nm로 광학현미경(200nm)보다 약 100배 높은 해상도를 제공한다.',
+   fb:'맞다. 전자의 파장이 가시광선보다 훨씬 짧아 훨씬 작은 구조(세포소기관 내부)도 관찰 가능하다.'},
+  {section:'c71',sLabel:'7.1 세포 연구 방법',node:'7.1 세포 연구 방법',ans:true,
+   q:'세포 분획법(cell fractionation)에서 원심분리력이 클수록 더 작고 가벼운 세포소기관이 침전된다.',
+   fb:'맞다. 핵(가장 크고 무거움) → 미토콘드리아/엽록체 → 소포체/리소좀 → 리보솜 순으로 침전된다.'},
+  {section:'c71',sLabel:'7.1 세포 연구 방법',node:'7.1 세포 연구 방법',ans:true,
+   q:'주사전자현미경(SEM)은 세포 표면에 전자빔을 주사하여 입체적 표면 이미지를 제공한다.',
+   fb:'맞다. TEM은 단면 투시, SEM은 표면 3D 이미지에 특화되어 있다.'},
+  {section:'c71',sLabel:'7.1 세포 연구 방법',node:'7.1 세포 연구 방법',ans:true,
+   q:'세포 분획법에서 핵(nucleus)은 미토콘드리아보다 낮은 원심분리 속도(g수)에서 먼저 침전된다.',
+   fb:'맞다. 핵은 가장 크고 밀도가 높아 약 600×g에서 침전되며, 미토콘드리아는 약 10,000×g에서 침전된다.'},
+  {section:'c71',sLabel:'7.1 세포 연구 방법',node:'7.1 세포 연구 방법',ans:false,
+   q:'광학현미경으로도 충분한 배율로 관찰하면 리보솜 같은 소형 세포소기관의 내부 구조를 볼 수 있다.',
+   fb:'틀리다. 광학현미경 분해능(~200nm)보다 리보솜(~25nm)이 훨씬 작아, 광학현미경으로는 원리적으로 관찰 불가하다.'},
+
+  // ── c72 원핵·진핵세포 (5문) ─────────────────
+  {section:'c72',sLabel:'7.2 원핵·진핵세포',node:'7.2 원핵·진핵세포',ans:true,
+   q:'원핵세포에는 막으로 둘러싸인 핵이 없으며, DNA는 핵양체(nucleoid region)라 불리는 세포질 내 구역에 존재한다.',
+   fb:'맞다. 원핵세포(Bacteria·Archaea)는 막성 소기관이 없고, DNA는 세포질 내 핵양체 영역에 집중되어 있다.'},
+  {section:'c72',sLabel:'7.2 원핵·진핵세포',node:'7.2 원핵·진핵세포',ans:false,
+   q:'진핵세포는 원핵세포보다 크기가 작아 표면적/부피 비율이 높아 물질 교환에 유리하다.',
+   fb:'틀리다. 진핵세포가 원핵세포보다 훨씬 크며(전형적으로 10~100μm vs 1~10μm), 내부의 막 구획화로 기능을 분업한다.'},
+  {section:'c72',sLabel:'7.2 원핵·진핵세포',node:'7.2 원핵·진핵세포',ans:true,
+   q:'원핵세포에도 리보솜이 있으나 진핵세포(80S)보다 작은 70S 리보솜이며, 이에 특이적인 항생제 개발이 가능하다.',
+   fb:'맞다. 세균의 70S 리보솜과 진핵세포의 80S 리보솜 차이를 이용해 인체에 무해한 항생제를 개발한다.'},
+  {section:'c72',sLabel:'7.2 원핵·진핵세포',node:'7.2 원핵·진핵세포',ans:false,
+   q:'고세균(Archaea)은 세균(Bacteria)과 마찬가지로 펩티도글리칸 성분의 세포벽을 가진다.',
+   fb:'틀리다. 고세균은 펩티도글리칸 세포벽이 없으며, 다양한 특수 다당류·단백질 성분의 세포벽을 가진다.'},
+  {section:'c72',sLabel:'7.2 원핵·진핵세포',node:'7.2 원핵·진핵세포',ans:true,
+   q:'진핵세포는 막으로 구획화(compartmentalization)되어 서로 다른 화학 환경에서 다양한 기능을 동시에 수행한다.',
+   fb:'맞다. 리소좀(산성), 미토콘드리아(산화적 인산화), 핵(전사) 등 각 구획이 최적 환경을 유지하며 기능한다.'},
+
+  // ── c73 핵과 리보솜 (5문) ───────────────────
+  {section:'c73',sLabel:'7.3 핵과 리보솜',node:'7.3 핵과 리보솜',ans:true,
+   q:'핵공(nuclear pore complex)은 핵막을 통한 물질 이동을 조절하며, mRNA와 단백질이 통과하는 통로이다.',
+   fb:'맞다. mRNA(전사 후 핵→세포질)와 단백질(번역 후 핵으로)이 핵공을 통해 이동하며, 능동적으로 조절된다.'},
+  {section:'c73',sLabel:'7.3 핵과 리보솜',node:'7.3 핵과 리보솜',ans:true,
+   q:'핵 라미나(nuclear lamina)는 내막 아래에 있는 중간섬유(intermediate filament) 단백질 그물망으로 핵 형태를 지지한다.',
+   fb:'맞다. 라민 단백질이 핵막을 안쪽에서 지지하며, 세포 분열 시 분해되었다가 재조립된다.'},
+  {section:'c73',sLabel:'7.3 핵과 리보솜',node:'7.3 핵과 리보솜',ans:true,
+   q:'인(nucleolus)은 리보솜 RNA(rRNA) 유전자가 전사되고 리보솜 소단위체가 조립되는 핵 내 구조이다.',
+   fb:'맞다. 인은 막성 소기관이 아니라, rRNA 전사와 리보솜 조립이 집중된 전자밀도 높은 구역이다.'},
+  {section:'c73',sLabel:'7.3 핵과 리보솜',node:'7.3 핵과 리보솜',ans:false,
+   q:'리보솜은 이중막으로 둘러싸인 세포소기관이며, 내막계(endomembrane system)의 일부이다.',
+   fb:'틀리다. 리보솜은 막이 없는(non-membranous) 비막성 소기관이다. 단백질과 rRNA로만 구성되며 내막계에 속하지 않는다.'},
+  {section:'c73',sLabel:'7.3 핵과 리보솜',node:'7.3 핵과 리보솜',ans:true,
+   q:'조면소포체(rough ER) 표면의 리보솜에서 합성된 단백질은 소포체 내강으로 이동한 후 분비·막 단백질로 가공된다.',
+   fb:'맞다. 신호 서열(signal sequence)이 있는 단백질은 번역 중 조면소포체 내강으로 삽입된다.'},
+
+  // ── c74 내막계 (5문) ─────────────────────────
+  {section:'c74',sLabel:'7.4 내막계',node:'7.4 내막계',ans:true,
+   q:'골지체(Golgi apparatus)는 소포체에서 온 단백질을 수정·분류하여 세포막·리소좀·세포 밖으로 보내는 "세포의 우체국"이다.',
+   fb:'맞다. cis(소포체 쪽)→medial→trans(배출 쪽) 방향으로 단백질 수식(당화·인산화 등)과 분류가 이루어진다.'},
+  {section:'c74',sLabel:'7.4 내막계',node:'7.4 내막계',ans:true,
+   q:'리소좀(lysosome)은 pH 약 5의 산성 환경에서 작동하는 가수분해 효소를 가지며, 세포내 소화와 자가포식에 관여한다.',
+   fb:'맞다. H⁺-ATPase가 내부를 산성으로 유지하며, 약 50여 가지 가수분해 효소가 생체분자를 분해한다.'},
+  {section:'c74',sLabel:'7.4 내막계',node:'7.4 내막계',ans:true,
+   q:'활면소포체(smooth ER)는 리보솜이 없으며, 지질 합성, 칼슘 이온 저장, 독소·약물 해독 기능을 담당한다.',
+   fb:'맞다. 간세포에서 특히 발달하며, 근육세포에서는 칼슘 저장소 역할이 두드러진다.'},
+  {section:'c74',sLabel:'7.4 내막계',node:'7.4 내막계',ans:false,
+   q:'분비 단백질의 이동 경로는 핵 → 조면소포체 → 골지체 → 세포막이다.',
+   fb:'틀리다. 핵에서 전사 후 세포질의 리보솜에서 번역이 시작되며, 분비 단백질은 조면소포체(합성)→골지체(수식·분류)→세포막(분비)으로 이동한다.'},
+  {section:'c74',sLabel:'7.4 내막계',node:'7.4 내막계',ans:true,
+   q:'퍼옥시좀(peroxisome)은 지방산 산화 및 독성 물질 해독 과정에서 과산화수소(H₂O₂)를 생성하고, 카탈라아제로 분해한다.',
+   fb:'맞다. 퍼옥시좀은 내막계 소기관이 아니지만 간·신장에서 중요한 해독 기능을 수행한다.'},
+
+  // ── c75 에너지 소기관 (5문) ─────────────────
+  {section:'c75',sLabel:'7.5 에너지 소기관',node:'7.5 에너지 소기관',ans:true,
+   q:'미토콘드리아는 외막과 내막의 이중막 구조를 가지며, ATP 합성은 내막(크리스타)에서 일어난다.',
+   fb:'맞다. 내막의 접힘(크리스타)이 내막 표면적을 넓혀 ATP 합성 효율을 높인다.'},
+  {section:'c75',sLabel:'7.5 에너지 소기관',node:'7.5 에너지 소기관',ans:true,
+   q:'세포내공생설(endosymbiont theory)에 따르면 미토콘드리아와 엽록체는 고세균이 아닌 세균(bacteria)에서 유래했다.',
+   fb:'맞다. 미토콘드리아는 α-프로테오박테리아, 엽록체는 남조류(시아노박테리아) 기원으로 알려져 있다.'},
+  {section:'c75',sLabel:'7.5 에너지 소기관',node:'7.5 에너지 소기관',ans:true,
+   q:'미토콘드리아와 엽록체는 각각 자체 DNA, 70S 리보솜을 가지며, 이분법으로 분열한다.',
+   fb:'맞다. 이 특성들은 세포내공생 기원의 증거이다. 클로람페니콜(70S 억제 항생제)이 이 소기관에도 작용한다.'},
+  {section:'c75',sLabel:'7.5 에너지 소기관',node:'7.5 에너지 소기관',ans:false,
+   q:'엽록체의 기질(stroma)은 빛에너지로 ATP와 NADPH를 생산하는 명반응 장소이다.',
+   fb:'틀리다. 명반응은 틸라코이드 막에서 일어나며, 기질(스트로마)은 캘빈 회로(CO₂ 고정·탄소 동화)의 장소이다.'},
+  {section:'c75',sLabel:'7.5 에너지 소기관',node:'7.5 에너지 소기관',ans:true,
+   q:'클로람페니콜은 세균의 70S 리보솜 기능을 억제하며, 같은 크기의 리보솜을 가진 미토콘드리아·엽록체도 영향을 받는다.',
+   fb:'맞다. 이것이 세포내공생설을 지지하는 생화학적 증거 중 하나이다.'},
+
+  // ── c76 세포골격 (5문) ──────────────────────
+  {section:'c76',sLabel:'7.6 세포골격',node:'7.6 세포골격',ans:true,
+   q:'미세소관(microtubule)은 α·β-튜불린 이합체로 구성된 가장 굵은(직경 25nm) 세포골격 섬유이다.',
+   fb:'맞다. 세포 분열 시 방추사, 섬모·편모의 9+2 구조로도 작동한다.'},
+  {section:'c76',sLabel:'7.6 세포골격',node:'7.6 세포골격',ans:true,
+   q:'액틴 필라멘트(microfilament)는 근육 수축, 세포 이동, 식세포작용, 세포질 분열 수축환 형성에 관여한다.',
+   fb:'맞다. 직경 약 7nm의 액틴 필라멘트는 미오신과 상호작용하여 운동력을 발생시킨다.'},
+  {section:'c76',sLabel:'7.6 세포골격',node:'7.6 세포골격',ans:true,
+   q:'섬모(cilia)와 편모(flagella)는 9+2 구조의 미세소관으로 이루어지며, 다이네인(dynein) 단백질이 운동을 담당한다.',
+   fb:'맞다. 바깥쪽 9쌍의 이중 소관 + 가운데 2개 단일 소관 구조로, 다이네인의 ATP 가수분해 에너지로 움직인다.'},
+  {section:'c76',sLabel:'7.6 세포골격',node:'7.6 세포골격',ans:false,
+   q:'세포골격은 세포 모양을 유지하는 영구적·정적 구조이므로 세포분열 시에도 해체되지 않는다.',
+   fb:'틀리다. 세포골격은 고도로 동적이다. 예를 들어 미세소관은 세포분열 시 방추사로 재조립되었다가 해체된다.'},
+  {section:'c76',sLabel:'7.6 세포골격',node:'7.6 세포골격',ans:true,
+   q:'중간섬유(intermediate filament)는 직경 약 10nm로 세포 형태 유지와 핵막 지지(라민 등)에 관여하는 구조 단백질이다.',
+   fb:'맞다. 중간섬유는 운동성은 없지만 장력에 강하여 세포 형태 유지·기계적 안정성에 기여한다.'},
+
+  // ── c77 세포 외부 구조 (5문) ─────────────────
+  {section:'c77',sLabel:'7.7 세포 외부 구조',node:'7.7 세포 외부 구조',ans:true,
+   q:'식물 세포벽은 주로 셀룰로오스 미세섬유로 구성되며, 1차 세포벽은 신장 가능하여 세포 성장을 허용한다.',
+   fb:'맞다. 성장이 끝난 세포는 목질소(리그닌) 등이 침착된 2차 세포벽을 형성하여 강화된다.'},
+  {section:'c77',sLabel:'7.7 세포 외부 구조',node:'7.7 세포 외부 구조',ans:true,
+   q:'원형질연락사(plasmodesmata)는 인접 식물 세포의 세포벽을 관통하여 세포질을 연결하는 채널이다.',
+   fb:'맞다. 원형질연락사를 통해 소분자·단백질·RNA 등이 세포 사이를 이동한다.'},
+  {section:'c77',sLabel:'7.7 세포 외부 구조',node:'7.7 세포 외부 구조',ans:false,
+   q:'밀착 연접(tight junction)은 세포 사이에 통로를 형성하여 이온과 소분자가 자유롭게 통과하도록 한다.',
+   fb:'틀리다. 그것은 간극 연접(gap junction)의 기능이다. 밀착 연접은 세포 사이 공간을 밀봉하여 물질 이동을 차단하는 역할을 한다.'},
+  {section:'c77',sLabel:'7.7 세포 외부 구조',node:'7.7 세포 외부 구조',ans:true,
+   q:'간극 연접(gap junction)은 인접 동물 세포 사이에 이온·소분자가 직접 통과할 수 있는 채널을 형성한다.',
+   fb:'맞다. 코넥신 단백질로 구성된 간극 연접은 심근 세포의 전기신호 전달 등에 중요하다.'},
+  {section:'c77',sLabel:'7.7 세포 외부 구조',node:'7.7 세포 외부 구조',ans:true,
+   q:'동물 세포외기질(ECM)의 주요 성분인 콜라겐은 동물의 몸에서 가장 풍부한 단백질이다.',
+   fb:'맞다. 콜라겐은 뼈·연골·피부·인대 등 결합 조직의 구조적 단백질로, 세포 외 지지·신호 전달에 기여한다.'}
+];
+
+const NQ=[
+  {meta:'연세대 2020',nodeId:'c74',nodeLabel:'7.4 내막계 — 골지체',
+   q:'진핵세포의 막성 세포소기관 중 세포 내 물질을 외부로 방출하는데 주로 기여하는 세포소기관은?',
+   opts:['① 미토콘드리아','② 골지체','③ 퍼옥시좀','④ 라이소좀'],
+   ans:1,expl:'골지체(trans 면)에서 분비 소포가 출아하여 세포막과 융합 → 세포외 분비(exocytosis)를 담당한다.'},
+  {meta:'연세대 2020',nodeId:'c74',nodeLabel:'7.4 내막계 — 리소좀',
+   q:'소화와 재활용에 사용되는 동물 세포 내 세포소기관은?',
+   opts:['① 미토콘드리아','② 골지체','③ 리소좀','④ 퍼옥시좀'],
+   ans:2,expl:'리소좀은 가수분해 효소를 가진 산성(pH≈5) 소기관으로 세포 내 소화·자가포식(autophagy)을 담당한다.'},
+  {meta:'연세대 2020',nodeId:'c71',nodeLabel:'7.1 세포막 — 당단백질·당지질',
+   q:'동물 세포막에서 당단백질과 당지질의 역할에 해당하는 것은?',
+   opts:['① 촉진확산','② 능동수송','③ 세포막 유동성 유지','④ 주변 세포의 유형·종류 인식'],
+   ans:3,expl:'당단백질·당지질은 세포 표면의 "세포 정체성 표지"로, 세포 인식, 면역 반응, 세포-세포 신호 전달에 관여한다.'},
+  {meta:'연세대 2021',nodeId:'c72',nodeLabel:'7.2 진핵·원핵 — 크기 이점',
+   q:'세포 크기의 표면적/부피 비율 관점에서 진핵세포가 원핵세포보다 유리한 이유로 옳은 것은?',
+   opts:['① 진핵세포는 더 작아 표면적/부피 비율이 높다','② 내부 막 구획화로 국소 표면적/부피 비율을 유지한다','③ 핵막이 표면적을 추가로 제공한다','④ 원핵세포보다 적은 물질 교환이 필요하다'],
+   ans:1,expl:'진핵세포는 크기가 크지만, 내부 막 구획(소포체·미토콘드리아 등)이 국소적 고표면적/부피 비율을 만들어 효율적 반응 환경을 제공한다.'},
+  {meta:'연세대 2021',nodeId:'c74',nodeLabel:'7.4 내막계 — 세포구조',
+   q:'세포의 구조 및 기능에 대한 설명으로 옳지 않은 것은?',
+   opts:['① 리소좀은 산성 가수분해 효소를 함유한다','② 퍼옥시좀은 지방산을 산화하여 H₂O₂를 생성한다','③ 액포는 식물세포에서만 존재하며 물과 다양한 물질을 저장한다','④ 조면소포체는 리보솜이 부착되어 분비 단백질을 합성한다'],
+   ans:2,expl:'액포는 식물세포에서 주로 크지만, 동물세포와 효모 등에도 소형 액포가 존재한다. ③이 옳지 않은 설명.'},
+  {meta:'연세대 2022',nodeId:'c71',nodeLabel:'7.1 세포분획 — 원심분리 순서',
+   q:'균질화된 세포를 원심분리할 때 pellet 형성 속도 순서(빠른 것부터)로 옳은 것은?',
+   opts:['① 핵 > 미토콘드리아 > 소포체/리소좀 > 리보솜','② 리보솜 > 소포체 > 미토콘드리아 > 핵','③ 미토콘드리아 > 핵 > 리보솜 > 소포체','④ 소포체 > 미토콘드리아 > 핵 > 리보솜'],
+   ans:0,expl:'크기·밀도 클수록 낮은 rpm에서 먼저 침전: 핵(가장 큼) → 미토콘드리아/엽록체 → 소포체/리소좀 → 리보솜(가장 작음).'},
+  {meta:'연세대 2022',nodeId:'c72',nodeLabel:'7.2 원핵세포 특징',
+   q:'진핵세포와 비교하여 원핵세포의 구별되는 특징으로 가장 거리가 먼 것은?',
+   opts:['① 막으로 둘러싸인 핵이 없다','② 70S 리보솜을 가진다','③ 세포막을 통한 물질 이동을 한다','④ 히스톤 단백질 없이 DNA가 존재한다'],
+   ans:2,expl:'세포막을 통한 물질 이동은 원핵·진핵 모두 공통 특성이다. 핵막 부재·70S 리보솜·히스톤 없는 DNA는 원핵세포 특유의 특징이다.'},
+  {meta:'연세대 2022',nodeId:'c73',nodeLabel:'7.3 핵 — 핵공·라미나',
+   q:'진핵세포에서 단백질·RNA의 핵 출입을 조절하는 핵 구조 (a)와, 내막 아래 그물망을 이루는 구조 (b)로 옳은 것은?',
+   opts:['① (a) 핵라미나, (b) 핵공','② (a) 핵공, (b) 핵라미나','③ (a) 인(nucleolus), (b) 핵공','④ (a) 핵공, (b) 크로마틴'],
+   ans:1,expl:'핵공 복합체(NPC)가 핵-세포질 물질 이동을 조절(a). 핵라미나는 중간섬유 단백질 라민으로 구성된 내막 지지 구조(b).'},
+  {meta:'연세대 2022',nodeId:'c73',nodeLabel:'7.3 핵 — 인(nucleolus)',
+   q:'핵 내에 위치하여 리보솜 RNA(rRNA)가 합성되는 장소는?',
+   opts:['① 핵공(nuclear pore)','② 핵라미나(nuclear lamina)','③ 인(nucleolus)','④ 크로마틴(chromatin)'],
+   ans:2,expl:'인(nucleolus)은 rRNA 유전자 주변의 전자밀도 높은 구역으로 rRNA 전사·리보솜 소단위체 조립이 일어난다.'},
+  {meta:'연세대 2022',nodeId:'c71',nodeLabel:'7.1 세포막 — 리보솜',
+   q:'RNA와 단백질로 구성된 복합체이며, 단백질 합성 공장 역할을 하는 세포소기관은?',
+   opts:['① 소포체','② 리보솜','③ 골지체','④ 핵'],
+   ans:1,expl:'리보솜은 rRNA+단백질 복합체로, 막이 없는 비막성 소기관이다. 조면소포체 표면 또는 세포질에 유리 형태로 존재한다.'},
+  {meta:'연세대 2022',nodeId:'c74',nodeLabel:'7.4 내막계 — 구성 소기관',
+   q:'내막계(endomembrane system)를 구성하는 요소에 속하지 않는 것은?',
+   opts:['① 핵막(nuclear envelope)','② 소포체(ER)','③ 골지체(Golgi)','④ 미토콘드리아(mitochondria)'],
+   ans:3,expl:'미토콘드리아·엽록체·퍼옥시좀은 내막계에 속하지 않는다. 내막계: 핵막·ER·골지체·리소좀·액포·세포막.'},
+  {meta:'연세대 2022',nodeId:'c74',nodeLabel:'7.4 내막계 — 활면소포체 해독',
+   q:'간에서 독과 약물의 해독작용을 담당하는 주요 세포소기관은?',
+   opts:['① 조면소포체','② 활면소포체','③ 골지체','④ 리소좀'],
+   ans:1,expl:'활면소포체(smooth ER)는 사이토크롬 P450 등 해독 효소를 포함하여 독소·약물을 산화·수식하여 분해한다.'},
+  {meta:'연세대 2022',nodeId:'c74',nodeLabel:'7.4 내막계 — 리소좀 자가포식',
+   q:'리소좀이 가수분해 효소로 세포 내부 유기물을 소화·재활용하는 기능을 무엇이라 하는가?',
+   opts:['① 식세포작용(phagocytosis)','② 자가포식(autophagy)','③ 세포외 분비(exocytosis)','④ 음세포작용(pinocytosis)'],
+   ans:1,expl:'자가포식(autophagy): 손상된 소기관 등이 이중막에 싸인 후 리소좀과 융합하여 분해·재활용되는 과정이다.'},
+  {meta:'연세대 2022',nodeId:'c75',nodeLabel:'7.5 에너지 소기관 — 엽록체',
+   q:'틸라코이드(thylakoids), DNA, 리보솜이 모두 관찰되는 세포소기관은?',
+   opts:['① 미토콘드리아','② 엽록체','③ 골지체','④ 리소좀'],
+   ans:1,expl:'엽록체는 틸라코이드 막(명반응), 스트로마(캘빈 회로), 자체 DNA·리보솜(세포내공생 기원 증거)을 가진다.'},
+  {meta:'연세대 2022',nodeId:'c77',nodeLabel:'7.7 세포 외부 — 원형질연락사',
+   q:'식물세포벽을 통해 인접 식물세포의 세포질과 결합되는 채널을 형성하는 구조는?',
+   opts:['① 밀착 연접(tight junction)','② 부착 연접(adhering junction)','③ 원형질연락사(plasmodesmata)','④ 간극 연접(gap junction)'],
+   ans:2,expl:'원형질연락사는 세포벽을 관통하는 세포질 채널로, 식물 세포 간 물질 이동과 신호 전달을 가능하게 한다.'},
+  {meta:'연세대 2022',nodeId:'c71',nodeLabel:'7.1 세포막 — 물질 투과성',
+   q:'지질 이중층을 통해 확산할 가능성이 가장 적은 분자는?',
+   opts:['① 소형 비극성 분자(CO₂, O₂)','② 소형 극성 분자(H₂O)','③ 지용성 스테로이드 호르몬','④ Na⁺, K⁺와 같은 이온'],
+   ans:3,expl:'이온은 전하를 띠어 지질 이중층의 소수성 코어를 통과하지 못한다. 통과를 위해 이온 채널·펌프가 필요하다.'},
+  {meta:'연세대 2023',nodeId:'c71',nodeLabel:'7.1 세포 연구 — TEM 해상도',
+   q:'투과전자현미경(TEM)이 광학현미경보다 높은 해상도를 달성하는 이유로 가장 옳은 것은?',
+   opts:['① TEM의 자기장 렌즈가 광학 렌즈보다 더 강하다','② 전자의 파장이 가시광선보다 매우 짧아 분해능이 높다','③ TEM은 형광 물질을 이용해 대비를 높인다','④ TEM 시료는 살아있는 상태로 관찰이 가능하다'],
+   ans:1,expl:'분해능은 파장에 비례한다. 전자의 파장(~0.005nm)은 가시광선(380~700nm)보다 약 10만배 짧아 훨씬 높은 분해능을 제공한다.'},
+  {meta:'연세대 2023',nodeId:'c74',nodeLabel:'7.4 내막계 — 분비 경로',
+   q:'세포 밖으로 분비될 단백질의 이동 경로로 맞는 것은?',
+   opts:['① 핵 → 미토콘드리아 → 세포막','② 리보솜(조면소포체) → 골지체 → 분비 소포 → 세포막','③ 리소좀 → 골지체 → 세포막','④ 조면소포체 → 핵 → 세포막'],
+   ans:1,expl:'분비 단백질 경로: 조면소포체(합성) → 이행 소포 → 골지체 cis→trans(수식·분류) → 분비 소포 → 세포막 융합(exocytosis).'},
+  {meta:'연세대 2023',nodeId:'c74',nodeLabel:'7.4 내막계 — 세포소기관 기능',
+   q:'다양한 세포소기관에 대한 설명 중 틀린 것은?',
+   opts:['① 리소좀은 자가포식과 세포 내 소화에 관여한다','② 퍼옥시좀은 지방산 산화 시 H₂O₂를 생성하고 카탈라아제로 분해한다','③ 중심소체(centrosome)는 세포 분열 시 방추사 형성에 관여하며, 엽록체에서 기원한다','④ 골지체는 단백질 수식(당화·인산화 등) 및 분류 배송을 담당한다'],
+   ans:2,expl:'중심소체는 세포내공생 기원이 아니다. 엽록체·미토콘드리아가 세균 기원. ③이 틀린 설명.'},
+  {meta:'연세대 2023',nodeId:'c76',nodeLabel:'7.6 세포골격',
+   q:'세포골격(cytoskeleton)에 대한 설명 중 틀린 것은?',
+   opts:['① 미세소관은 α·β-튜불린 이합체로 이루어진 속이 빈 관 구조이다','② 액틴 필라멘트는 세포 이동, 세포질 분열, 근육 수축에 관여한다','③ 세포골격은 영구적·불변의 구조로 세포 분열 시 해체되지 않는다','④ 중간섬유는 세포 형태 유지와 핵막 지지(라민) 역할을 한다'],
+   ans:2,expl:'세포골격은 동적 구조로 끊임없이 재조립·해체된다. 세포분열 시 미세소관은 방추사로 재조립된다. ③이 틀린 설명.'},
+  {meta:'연세대 2023',nodeId:'c77',nodeLabel:'7.7 세포 외부 구조·세포연접',
+   q:'세포외 구조와 세포연접에 대한 설명 중 틀린 것은?',
+   opts:['① 원형질연락사는 인접 식물 세포 사이를 연결하는 세포질 채널이다','② 밀착 연접은 동물 세포막 사이의 공간을 밀봉하여 물질 이동을 차단한다','③ 간극 연접은 이온·소분자가 세포 간에 직접 이동하도록 통로를 제공한다','④ 동물의 ECM에서 프로테오글리칸은 세포 신호 전달에 관여하지 않는다'],
+   ans:3,expl:'ECM의 프로테오글리칸은 성장인자 등 신호 분자와 결합하여 세포 신호 전달에 관여한다. ④가 틀린 설명.'},
+  {meta:'연세대 2023',nodeId:'c71',nodeLabel:'7.1 세포막 — 유동모자이크',
+   q:'세포막(cell membrane) 구조와 기능에 대한 설명 중 옳은 것은?',
+   opts:['① 세포막의 인지질은 소수성 머리와 친수성 꼬리를 가진다','② 막단백질은 세포막 내에서 전혀 이동하지 않는다','③ 콜레스테롤은 고온에서 막을 안정화하고 저온에서 유동성을 높인다','④ 당단백질은 막 내부에서 세포 신호전달에만 기여한다'],
+   ans:2,expl:'콜레스테롤은 온도 완충제 역할: 고온→과도한 유동성 억제, 저온→결정화 방지·유동성 유지. ③이 옳은 설명.'},
+  {meta:'연세대 2023',nodeId:'c71',nodeLabel:'7.1 세포막 기능',
+   q:'세포막의 기능과 특징에 관한 설명 중 옳은 것은?',
+   opts:['① 모든 막 지질은 소수성이어서 물에 완전히 녹는다','② 막의 선택적 투과성은 세포 내 이온 농도 조절을 가능하게 한다','③ 세포막의 인지질은 포화 지방산만을 함유한다','④ 내재성 막단백질(integral protein)은 막 표면에 약하게 결합한다'],
+   ans:1,expl:'선택적 투과성(selective permeability)은 세포막의 핵심 기능으로, K⁺/Na⁺ 농도 기울기 유지 등 항상성 조절의 기본이다.'},
+  {meta:'연세대 2024',nodeId:'c74',nodeLabel:'7.4 내막계 — 세포소기관 기능',
+   q:'세포 및 세포소기관에 대한 설명으로 옳은 것은?',
+   opts:['① 리소좀의 가수분해 효소는 세포질(pH≈7.2)에서 최적으로 활성화된다','② 미토콘드리아 내막에는 ATP 합성효소와 전자전달계 복합체가 존재한다','③ 골지체는 단백질을 합성하고 세포 내로만 전달한다','④ 퍼옥시좀은 세포 내 소화와 자가포식을 전담한다'],
+   ans:1,expl:'미토콘드리아 내막에는 전자전달계(복합체 I~IV)와 ATP 합성효소(F₀F₁)가 위치하여 산화적 인산화를 수행한다.'},
+  {meta:'연세대 2024',nodeId:'c71',nodeLabel:'7.1 세포막 — 구조·특성',
+   q:'세포막 구조와 특징에 대한 설명으로 옳지 않은 것은?',
+   opts:['① 인지질 이중층은 소수성 꼬리가 안쪽을 향한 구조이다','② 막단백질은 이동할 수 있어 "유동 모자이크 모델"이라 부른다','③ 불포화 지방산이 많을수록 저온에서 막의 유동성이 감소한다','④ 콜레스테롤은 동물 세포막의 유동성 완충제 역할을 한다'],
+   ans:2,expl:'불포화 지방산의 이중결합은 사슬을 굽혀 분자 간 밀집을 방해하므로, 많을수록 유동성이 증가한다. ③이 틀린 설명.'},
+  {meta:'연세대 2017',nodeId:'c71',nodeLabel:'7.1 세포막 — 단백질 배치',
+   q:'세포막과 세포막 단백질 배치에 대해 올바르게 설명한 것은?',
+   opts:['① 세포막의 인지질과 단백질은 공유결합으로 연결된다','② 세포막의 단백질은 표면 부착 또는 이중막 관통 두 가지 형태로 존재한다','③ 인지질의 유동성은 단백질이 막을 자유롭게 통과할 수 있게 한다','④ 인지질 유동성은 단백질 크기에 의해 절대적으로 조절된다'],
+   ans:1,expl:'막단백질은 표재성(peripheral) 단백질과 내재성(integral/transmembrane) 단백질 두 가지 형태로 존재한다. ②가 옳은 설명.'},
+  {meta:'연세대 2017',nodeId:'c74',nodeLabel:'7.4 내막계 — 리소좀·오토파지',
+   q:'오토파지(autophagy)에 직접적으로 관여하는 세포소기관은?',
+   opts:['① 활면소포체(smooth ER)','② 퍼옥시좀(peroxisome)','③ 리소좀(lysosome)','④ 골지체(Golgi apparatus)'],
+   ans:2,expl:'자가포식(autophagy): 손상 소기관이 이중막에 싸인 자가포식소체 → 리소좀과 융합 → 가수분해 효소로 분해·재활용.'},
+  {meta:'연세대 2017',nodeId:'c75',nodeLabel:'7.5 에너지 소기관 — 세포내공생',
+   q:'클로람페니콜(원핵세포 70S 리보솜 억제제)에 영향을 받는 세포나 기관은? (가)세균 (나)고세균 (다)미토콘드리아 (라)엽록체',
+   opts:['① 가, 나','② 가, 다','③ 나, 다, 라','④ 가, 다, 라'],
+   ans:3,expl:'세균·미토콘드리아·엽록체는 70S 리보솜을 가진다. 고세균은 진핵생물에 가까운 80S형 번역계를 가지므로 영향 없다.'},
+  {meta:'연세대(약대) 2026',nodeId:'c71',nodeLabel:'7.1 세포막 — 지질 유동성',
+   q:'37℃에서 15℃로 옮겼을 때 지질 확산이 감소한 세포에서 15℃ 유동성을 증가시키는 요인을 모두 고르면?',
+   opts:['① 불포화 지방산만 증가','② 콜레스테롤만 증가','③ 불포화 지방산 증가 + 콜레스테롤 증가','④ 포화 지방산 증가'],
+   ans:2,expl:'저온에서: 불포화 지방산(이중결합→사슬 굽힘→밀집 방해)과 콜레스테롤(결정화 방지)이 모두 유동성 유지에 기여한다.'},
+  {meta:'연세대(약대) 2026',nodeId:'c71',nodeLabel:'7.1 세포막 — 원형질분리·투과성',
+   q:'식물세포를 고장액에 넣으면 원형질 분리(plasmolysis)가 일어나지만 동물세포에서는 일어나지 않는 이유는?',
+   opts:['① 식물세포는 세포막이 없어 삼투 조절 불가','② 식물세포는 세포벽이 있어 수축 시 원형질이 세포벽에서 분리된다','③ 동물세포는 세포벽이 있어 수축이 방지된다','④ 동물세포는 세포막이 세포벽보다 강도가 높아 수축하지 않는다'],
+   ans:1,expl:'식물세포는 세포벽이 있어 원형질막이 안쪽으로 수축해도 세포벽은 유지된다 → 원형질과 세포벽 분리(원형질 분리). 동물세포는 세포벽이 없어 세포 전체가 쪼그라든다(수축, crenation).'},
+  {meta:'연세대(약대) 2026',nodeId:'c71',nodeLabel:'7.1 세포막 — 소수성 분자 투과',
+   q:'작은 비극성 분자가 이온에 비해 세포막 투과성이 높은 이유는?',
+   opts:['① 비극성 분자는 막단백질 채널을 통해 빠르게 이동하기 때문','② 비극성 분자는 인지질 이중층의 소수성 내부를 자유롭게 통과할 수 있기 때문','③ 이온은 분자량이 너무 커서 막을 통과하지 못하기 때문','④ 비극성 분자는 능동수송으로 농도기울기를 무시하고 이동하기 때문'],
+   ans:1,expl:'지질 이중층의 코어는 소수성이므로, 비극성·지용성 분자는 자유롭게 용해 통과 가능. 하전된 이온은 통과 불가 → 채널·펌프 필요.'},
+  {meta:'고려대 2021',nodeId:'c74',nodeLabel:'7.4 내막계 — 분비 단백질 경로',
+   q:'세포막을 통해 외부로 분비되는 단백질의 이동 경로로 옳은 것은?',
+   opts:['① 핵 → 리보솜 → 미토콘드리아 → 세포막','② 조면소포체 → 골지체(cis→trans) → 분비 소포 → 세포막','③ 리소좀 → 골지체 → 세포막','④ 골지체 → 조면소포체 → 세포막'],
+   ans:1,expl:'분비 단백질: 조면소포체(리보솜에서 합성 후 내강 삽입) → 이행 소포 → 골지체 cis면 진입 → trans면에서 출아 → 세포막 exocytosis.'},
+  {meta:'고려대 2021',nodeId:'c74',nodeLabel:'7.4 내막계 — 자가포식',
+   q:'리소좀이 세포 자신의 물질을 소화·재활용하는 과정 (가)와, 이때 손상 소기관이 막에 싸인 후 최종 융합하는 소기관 (나)는?',
+   opts:['① (가) 식세포작용, (나) 리소좀','② (가) 자가포식, (나) 리소좀','③ (가) 자가포식, (나) 골지체','④ (가) 엔도시토시스, (나) 소포체'],
+   ans:1,expl:'자가포식(autophagy): 이중막 자가포식소체(autophagosome)가 손상 소기관을 감싼 후 리소좀과 융합 → 가수분해 효소로 분해 → 재활용.'},
+  {meta:'고려대 2022',nodeId:'c73',nodeLabel:'7.3 핵 — DNA 포함 소기관',
+   q:'다음 중 단백질을 암호화하는 DNA를 포함하는 것을 모두 고르면?',
+   opts:['① 핵, 미토콘드리아','② 핵, 미토콘드리아, 엽록체','③ 핵, 미토콘드리아, 엽록체, 세균','④ 미세소관, 리보솜'],
+   ans:2,expl:'핵(genomic DNA), 미토콘드리아(mt-DNA), 엽록체(cp-DNA) 모두 자체 DNA를 가진다. 세균도 포함 가능하나 보기에서 독감 바이러스는 RNA 유전체.'},
+  {meta:'고려대 2024',nodeId:'c74',nodeLabel:'7.4 내막계 — 퍼옥시좀',
+   q:'동물세포 내에서 대사 부산물로 과산화수소(H₂O₂)를 생성하고, 카탈라아제로 이를 물과 산소로 분해하는 소기관은?',
+   opts:['① 미토콘드리아','② 골지체','③ 리소좀','④ 퍼옥시좀'],
+   ans:3,expl:'퍼옥시좀(peroxisome)은 지방산 β-산화, 아미노산 산화 등에서 H₂O₂를 생성하고, 내부 카탈라아제로 즉시 분해하여 세포를 보호한다.'}
+];
+
+  let oxIdx=0,oxScore=0,oxDone=false;
+
+  function buildNQCard(q,qi,unlocked){
+    const card=document.createElement('div');
+    card.className='nq-card'; card.id='nqcard-'+qi;
+    const meta=`<div class="nq-meta">📄 ${q.meta}</div><div class="nq-node-tag">📍 ${q.nodeLabel}</div>`;
+    if(!unlocked){
+      card.innerHTML=meta+`<div class="nq-lock-msg"><span style="font-size:22px">🔒</span><span>OX 퀴즈 80점 이상 달성 후 열립니다</span></div>`;
+      return card;
+    }
+    card.innerHTML=meta+`<div class="nq-question">${q.q}</div>`+
+      q.opts.map((o,oi)=>`<button class="nq-option" data-oi="${oi}">${o}</button>`).join('')+
+      `<div class="nq-explanation" id="nqexpl-${qi}">💡 <strong>해설:</strong> ${q.expl}</div>`;
+    card.querySelectorAll('.nq-option').forEach(btn=>{
+      btn.addEventListener('click',function(){
+        const oi=+this.dataset.oi;
+        card.querySelectorAll('.nq-option').forEach((b,bi)=>{b.disabled=true;if(bi===q.ans)b.classList.add('reveal');});
+        this.classList.add(oi===q.ans?'correct':'wrong');
+        document.getElementById('nqexpl-'+qi).classList.add('show');
+      });
+    });
+    return card;
+  }
+
+  function unlockNQ(){
+    NQ.forEach((q,qi)=>{
+      const old=document.getElementById('nqcard-'+qi);
+      if(old){const nc=buildNQCard(q,qi,true);old.parentNode.replaceChild(nc,old);}
+    });
+    const banner=document.querySelector('.lock-banner,.unlock-badge');
+    if(banner){banner.className='unlock-badge';banner.style.display='block';
+      banner.innerHTML='<h3>🔓 기출 연결 문제 활성화됨!</h3><p>OX 퀴즈 통과 기록이 저장되었습니다</p>';}
+  }
+
+  function renderOX(box){
+    box.innerHTML='';
+    if(oxDone){renderResult(box);return;}
+    const q=OX[oxIdx];
+    const pct=(oxIdx/OX.length*100).toFixed(0);
+    const el=document.createElement('div');
+    el.innerHTML=`
+      <div class="ox-progress-bar"><div class="ox-progress-fill" style="width:${pct}%"></div></div>
+      <div class="ox-qnum">문제 ${oxIdx+1} / ${OX.length} <span style="opacity:.5;font-size:.85em">(${q.sLabel||q.node})</span></div>
+      <div class="ox-node-hint">📍 ${q.node}</div>
+      <div class="ox-question">${q.q}</div>
+      <div class="ox-btn-row">
+        <button class="ox-btn o-btn" id="oxO">⭕ 맞다 (O)</button>
+        <button class="ox-btn x-btn" id="oxX">❌ 틀리다 (X)</button>
+      </div>
+      <div class="ox-feedback" id="oxFb"></div>
+      <button class="ox-next-btn" id="oxNext" style="display:none">${oxIdx+1<OX.length?'다음 문제 →':'결과 확인'}</button>`;
+    box.appendChild(el);
+    const oBtn=el.querySelector('#oxO'),xBtn=el.querySelector('#oxX');
+    const fb=el.querySelector('#oxFb'),nxt=el.querySelector('#oxNext');
+    let answered=false;
+    function pick(sel){
+      if(answered)return; answered=true;
+      const ok=(sel===q.ans); if(ok)oxScore++;
+      oBtn.disabled=xBtn.disabled=true;
+      if(q.ans===true)oBtn.classList.add('show-correct'); else xBtn.classList.add('show-correct');
+      if(ok){(sel===true?oBtn:xBtn).classList.add('sel-correct');}
+      else{(sel===true?oBtn:xBtn).classList.add('sel-wrong');}
+      fb.className='ox-feedback '+(ok?'correct':'wrong');
+      fb.innerHTML=(ok?'✅ 정답! ':'❌ 오답! ')+q.fb;
+      fb.style.display='block'; nxt.style.display='block';
+    }
+    oBtn.addEventListener('click',()=>pick(true));
+    xBtn.addEventListener('click',()=>pick(false));
+    nxt.addEventListener('click',()=>{oxIdx++;if(oxIdx>=OX.length)oxDone=true;renderOX(box);});
+  }
+
+  function renderResult(box){
+    const pct=Math.round(oxScore/OX.length*100); const pass=pct>=80;
+    if(pass&&!isUnlocked){isUnlocked=true;localStorage.setItem(CH_KEY,'1');}
+    box.innerHTML=`
+      <div class="ox-result">
+        <div class="score-circle ${pass?'score-pass':'score-fail'}">${pct}점</div>
+        <h3>${pass?'🎉 통과! 기출 문제 활성화!':'😅 아쉽네요...'}</h3>
+        <p>${oxScore}/${OX.length} 정답${pass?' · 기출 연결 문제가 활성화되었습니다.':' · 80점 이상이면 기출 문제가 열립니다.'}</p>
+        <button class="ox-retry-btn" id="oxRetry">🔄 다시 풀기</button>
+      </div>`;
+    box.querySelector('#oxRetry').addEventListener('click',()=>{oxIdx=0;oxScore=0;oxDone=false;renderQuiz();});
+    if(pass)unlockNQ();
+  }
+
+  function renderQuiz(){
+    isUnlocked=localStorage.getItem(CH_KEY)==='1';
+    qSec.innerHTML='';
+    qSec.innerHTML=`<div class="quiz-header"><h2>7장 세포 구조와 기능 — 시험 대비 퀴즈</h2><p>OX 퀴즈 80점 이상 달성 시 기출 연결 문제가 활성화됩니다</p></div>`;
+    const banner=document.createElement('div');
+    if(isUnlocked){banner.className='unlock-badge';banner.style.display='block';banner.innerHTML='<h3>🔓 기출 연결 문제 활성화됨</h3><p>OX 퀴즈 통과 기록이 있습니다</p>';}
+    else{banner.className='lock-banner';banner.innerHTML='<div class="lock-icon">🔒</div><h3>기출 연결 문제 잠금 중</h3><p>아래 OX 퀴즈에서 80점 이상을 달성하면 자동으로 활성화됩니다</p>';}
+    qSec.appendChild(banner);
+    const oxBox=document.createElement('div');
+    oxBox.className='ox-container'; qSec.appendChild(oxBox); renderOX(oxBox);
+    const nqTitle=document.createElement('div');
+    nqTitle.className='nq-section-title';nqTitle.textContent='📌 연고대 기출 연결 문제';
+    qSec.appendChild(nqTitle);
+    NQ.forEach((q,qi)=>qSec.appendChild(buildNQCard(q,qi,isUnlocked)));
+  }
+
+  const tabBar=document.getElementById('tabBar'),mapArea=document.getElementById('mapArea');
+  const qBtn=document.createElement('button');
+  qBtn.className='tab-btn';qBtn.innerHTML='📝 OX 퀴즈';
+  tabBar.appendChild(qBtn);
+  const qSec=document.createElement('div');
+  qSec.className='map-section';qSec.id='sec-quiz';
+  mapArea.appendChild(qSec);
+
+  qBtn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');b.style.color=b.style.borderColor=''});
+    qBtn.classList.add('active');qBtn.style.color='#818cf8';qBtn.style.borderColor='#818cf8';
+    document.querySelectorAll('.map-section').forEach(s=>s.classList.remove('active'));
+    qSec.classList.add('active');
+    if(!qSec.hasChildNodes())renderQuiz();
+  });
+  qBtn.click();
+  setTimeout(()=>{
+    const first=tabBar.querySelector('.tab-btn:not(#quizTabBtn)');
+    if(first)first.click();
+    qBtn.id='quizTabBtn';
+  },50);
+})();
 </script>
 </body>
 </html>
